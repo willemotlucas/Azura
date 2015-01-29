@@ -138,10 +138,6 @@ footer {
     color: #FFFFFF;
 }
 
-a.navbar-text {
-    font-size: 16px;
-    font-weight: bold;
-}
 
 
 /*
@@ -151,10 +147,26 @@ a.navbar-text {
  */
 
 section h1, header h1 {
-    margin: 3% 0 3% 0;
+    margin: 0 0 3% 0;
     font-family: 'basic_title_fontregular', 'Source Sans Pro', sans-serif;
     font-size: 64px;
     font-weight: bold;
+}
+
+.navbar .container {
+    width: 100%;
+}
+
+li a.navbar-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-family: 'KG Chasing Cars', sans-serif;
+    font-size: 85px;
+    margin-top: 2%;
+    color: #158cba;
 }
 
 
@@ -199,6 +211,10 @@ section h1, header h1 {
 #brands {
     background-image: url('../img/home/brands-background.jpg');
     background-repeat: repeat;
+}
+
+#brands h1 {
+    margin-top: 3%;
 }
 
 #brands h3 {
