@@ -218,3 +218,32 @@ section h1, header h1 {
     text-align: center;
     margin: 8% 0 8% 0;
 }
+
+/*
+ *
+ * FOOTER
+ * 
+ */
+
+#footer {
+    background-image: url('../img/bg_footer.png');
+    background-repeat: repeat-x;
+    height: 70px;
+}
+
+#footer p {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/*
+ *
+ * MEDIA QUERIES
+ * 
+ */
+
+ @media screen and (max-width: 1366px) {
+    #brands .thumbnail small {
+        font-size: 55%;
+    }
+ }
