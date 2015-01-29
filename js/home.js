@@ -12,9 +12,12 @@ function equalHeight(group) {
         }    
     });    
     group.each(function() { $(this).height(tallest); });
-} 
+}
 
-$(document).ready(function() {   
-	console.log('ok');
-    equalHeight($(".thumbnail")); 
+$(document).ready(function() {
+    equalHeight($(".thumbnail"));
+    
+    $(window).resize(function(){
+            equalHeight($(".thumbnail"));
+    });
 });
