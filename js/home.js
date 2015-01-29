@@ -14,10 +14,30 @@ function equalHeight(group) {
     group.each(function() { $(this).height(tallest); });
 }
 
+function changeModalDialog() {
+    var modalDialogs = $('#last-achievement img');
+    
+    if($(window).width() < 615)
+    {
+        //Desactivate the modal dialog
+        modalDialogs.each(function() {
+            $(this).attr("data-toggle", "#");
+        });
+    }
+    else
+    {
+        modalDialogs.each(function() {
+            $(this).attr("data-toggle", "modal");
+        });
+    }
+}
+
 $(document).ready(function() {
     equalHeight($(".thumbnail"));
+    changeModalDialog();
     
     $(window).resize(function(){
-            equalHeight($(".thumbnail"));
+        equalHeight($(".thumbnail"));
+        changeModalDialog();
     });
 });
