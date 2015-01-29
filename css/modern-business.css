@@ -226,8 +226,8 @@ section h1, header h1 {
  */
 
 #last-achievement {
-    /*background-color: #F5F5F5;*/
     background-image: url('../img/home/last-achievement-background.jpg');
+    background-position: 0% 30%;
     padding-bottom: 3%
 }
 
@@ -277,7 +277,6 @@ section h1, header h1 {
 
 #footer p {
     margin: 3% 0 3% 0;
-    /*font-weight: bold;*/
     font-size: 1.1em;
     font-family: 'Roboto', sans-serif;
 }
