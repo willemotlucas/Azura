@@ -153,7 +153,7 @@ a.navbar-text {
 section h1, header h1 {
     margin: 3% 0 3% 0;
     font-family: 'basic_title_fontregular', 'Source Sans Pro', sans-serif;
-    font-size: 80px;
+    font-size: 64px;
     font-weight: bold;
 }
 
@@ -217,6 +217,26 @@ section h1, header h1 {
     font-size: 1.6em;
     text-align: center;
     margin: 8% 0 8% 0;
+}
+
+/*
+ * 
+ * LAST ACHIEVEMENT SECTION
+ *
+ */
+
+#last-achievement {
+    background-color: #F5F5F5;
+    padding-bottom: 3%
+}
+
+#last-achievement img {
+    margin-bottom: 10%;
+}
+
+#last-achievement h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
 }
 
 /*
