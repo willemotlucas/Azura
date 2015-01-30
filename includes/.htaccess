@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^contact.php$ contact [L] 
+RewriteRule ^index.php$ accueil [L] 

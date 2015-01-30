@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
 
 <head>
 
@@ -19,13 +20,14 @@
     <title>AZURA, boutique de décoration d'intérieur à Blois</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/lumen_bootstrap.css" rel="stylesheet">
+    <link href="../res/css/lumen_bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../res/css/modern-business.css" rel="stylesheet">
+    <link href="../res/css/index.css" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 
@@ -40,57 +42,7 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand navbar-text" href="index.html" style="color: #158cba;">AZURA</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="navbar-text" href="index.html">Accueil</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Farrow & Ball</a>
-                            </li>
-                            <li>
-                                <a href="#">Little Green</a>
-                            </li>
-                            <li>
-                                <a href="#">Toulemonde Bochart</a>
-                            </li>
-                            <li>
-                                <a href="#">Elitis</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="navbar-text" href="#">Nos services</a>
-                    </li>
-                    <li>
-                        <a class="navbar-text" href="#">Nos réalisations</a>
-                    </li>
-                    <li>
-                        <a class="navbar-text" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php include("includes/menu.php") ?>
 
     <!-- About shop header -->
     <header id="about">
@@ -118,7 +70,7 @@
             <div id="thumbnail-container" class="row">
                 <div class="col-lg-3 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="./img/home/farrow-and-ball.png" alt="">
+                    <img class="img-responsive" src="./res/img/home/farrow-and-ball.png" alt="">
                     <div class="caption">
                         <h3>Farrow & Ball<br>
                             <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -132,7 +84,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./img/home/little-green.png" alt="">
+                        <img class="img-responsive" src="./res/img/home/little-green-hd.png" alt="">
                         <div class="caption">
                             <h3 id="little">Little Green<br>
                                 <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -146,7 +98,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./img/home/bochart.png" alt="">
+                        <img class="img-responsive" src="./res/img/home/bochart-hd.png" alt="">
                         <div class="caption">
                             <h3>Toulemonde Bochart<br>
                                 <small class="text-black">Tapis</small> <br>
@@ -160,7 +112,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./img/home/elitis.png" alt="">
+                        <img class="img-responsive" src="./res/img/home/elitis-hd.png" alt="">
                         <div class="caption">
                             <h3>ELITIS<br>
                                 <small class="text-black">Papiers peints, revêtements et tissus</small> <br>
@@ -276,37 +228,24 @@
                     </div>
                 </div>
             </div>
-
             <!-- End of Modal dialog -->
+            
         </section>
         <!-- End of last achievement section -->
 
-        <!-- Footer -->
-        <div id="footer" class="img-responsive">
-            <div class="row">
-                <div class="col-lg-4 col-sm-4 col-xs-4">
-                    <p>Site web réalisé par <a href="http://lucas-willemot.fr">Lucas Willemot</a></p>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-4">
-                    <p class="align-center"><strong>AZURA à BLOIS, 12 Rue Emile Laurens - 02.54.78.72.63</strong></p>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-4">
-                    <p class="align-right">Copyright &copy AZURA - <a href="#">Mentions légales</a></p>
-                </div>
-            </div>
-        </div>
+        <?php include("/includes/footer.php"); ?>
 
     </div>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="res/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="res/js/bootstrap.min.js"></script>
 
     <!-- Custom script -->
-    <script src="js/home.js"></script>
+    <script src="res/js/home.js"></script>
 
 
 

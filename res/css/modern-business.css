@@ -115,6 +115,7 @@ footer {
     /*padding: 0 15px 0 0;*/
 }
 
+
 /*
  * 
  * GENERAL STYLE
@@ -138,20 +139,11 @@ footer {
     color: #FFFFFF;
 }
 
-
-
 /*
- * 
- * HOME PAGE
+ *
+ * MENU STYLE
  *
  */
-
-section h1, header h1 {
-    margin: 0 0 3% 0;
-    font-family: 'basic_title_fontregular', 'Source Sans Pro', sans-serif;
-    font-size: 64px;
-    font-weight: bold;
-}
 
 .navbar .container {
     width: 100%;
@@ -169,113 +161,9 @@ li a.navbar-text {
     color: #158cba;
 }
 
-
-/*
- * ABOUT SECTION
- */
-
-#about{
-    background-image: url('../img/home/about-background2.jpg');
-    background-position: 30%;
-}
-
-#about .jumbotron {
-    background-color: rgba(34, 34, 34, 0.7);
-    border: 0;
-    padding: 3%;
-    margin-bottom: 0px;
-}
-
-#about .jumbotron p {
-    color: #FFFFFF;
-    text-align: justify;
-}
-
-#about .jumbotron h1 {
-    color: #FFFFFF;
-    text-align: center;
-}
-
-#about .jumbotron img {
-    opacity: 1;
-}
-
-#about h1 {
-    display: inline-block;
-}
-
-
-/*
- * BRANDS SECTION
- */
-
-#brands {
-    background-image: url('../img/home/brands-background.jpg');
-    background-repeat: repeat;
-}
-
-#brands h1 {
-    margin-top: 3%;
-}
-
-#brands h3 {
-    font-family: 'Roboto','Source Sans Pro', sans-serif;
-    font-weight: 500;
- }
-
-#brands .thumbnail {
-    border: 0px;
-    margin: 0 3% 15% 3%;
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-#brands h4 {
-    font-size: 1.6em;
-    text-align: center;
-    margin: 8% 0 8% 0;
-}
-
-/*
- * 
- * LAST ACHIEVEMENT SECTION
- *
- */
-
-#last-achievement {
-    background-image: url('../img/home/last-achievement-background.jpg');
-    background-position: 0% 30%;
-    padding-bottom: 3%
-}
-
-#last-achievement img {
-    margin-bottom: 10%;
-}
-
-#last-achievement h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-}
-
-#last-achievement {
-    color: #FFFFFF;
-}
-
-#last-achievement .modal-dialog {
-    width: 800px;
-}
-
-#last-achievement .jumbotron {
-    background-color: rgba(34, 34, 34, 0.7);
-    border: 0;
-    padding: 3%;
-    margin-bottom: -3%;
-    border-radius: 0px;
-}
-
 /*
  *
- * FOOTER
+ * FOOTER STYLE
  * 
  */
 
@@ -288,19 +176,3 @@ li a.navbar-text {
     font-size: 1.1em;
     font-family: 'Roboto', sans-serif;
 }
-
-/*
- *
- * MEDIA QUERIES
- * 
- */
-
- @media screen and (max-width: 1366px) {
-    #brands .thumbnail small {
-        font-size: 55%;
-    }
-
-    #last-achievement .modal-dialog {
-        width: 600px;
-    }
- }
