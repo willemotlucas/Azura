@@ -2,3 +2,4 @@ Options +FollowSymlinks
 RewriteEngine On
 RewriteRule ^contact/$ contact.php [L]
 RewriteRule ^accueil/$ index.php [L]
+RewriteRule ^realisations/$ achievements.php [L]

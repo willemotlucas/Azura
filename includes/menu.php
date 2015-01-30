@@ -38,7 +38,10 @@
                         <a class="navbar-text" href="#">Nos services</a>
                     </li>
                     <li>
-                        <a class="navbar-text" href="#">Nos réalisations</a>
+                        <a class="navbar-text" href="/Azura/realisations/">Nos réalisations</a>
+                    </li>
+                    <li>
+                        <a class="navbar-text" href="#">Commander un produit</a>
                     </li>
                     <li>
                         <a class="navbar-text" href="/Azura/contact/">Contact</a>

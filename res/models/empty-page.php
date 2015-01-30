@@ -38,5 +38,11 @@
 		<?php include("includes/menu.php"); ?>
 
 		<?php include("includes/footer.php"); ?>
+
+		<!-- jQuery -->
+	    <script src="../res/js/jquery.js"></script>
+
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="../res/js/bootstrap.min.js"></script>
 	</body>
 </html>
