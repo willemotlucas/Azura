@@ -20,14 +20,14 @@
     <title>AZURA, boutique de décoration d'intérieur à Blois</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../res/css/lumen_bootstrap.css" rel="stylesheet">
+    <link href="/Azura/res/css/lumen_bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../res/css/modern-business.css" rel="stylesheet">
-    <link href="../res/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/Azura/res/css/modern-business.css" rel="stylesheet">
+    <link href="/Azura/res/css/index.css" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href="../res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Azura/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 
@@ -70,7 +70,7 @@
             <div id="thumbnail-container" class="row">
                 <div class="col-lg-3 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="./res/img/home/farrow-and-ball.png" alt="">
+                    <img class="img-responsive" src="/Azura/res/img/home/farrow-and-ball.png" alt="">
                     <div class="caption">
                         <h3>Farrow & Ball<br>
                             <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./res/img/home/little-green-hd.png" alt="">
+                        <img class="img-responsive" src="/Azura/res/img/home/little-green-hd.png" alt="">
                         <div class="caption">
                             <h3 id="little">Little Green<br>
                                 <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./res/img/home/bochart-hd.png" alt="">
+                        <img class="img-responsive" src="/Azura/res/img/home/bochart-hd.png" alt="">
                         <div class="caption">
                             <h3>Toulemonde Bochart<br>
                                 <small class="text-black">Tapis</small> <br>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="./res/img/home/elitis-hd.png" alt="">
+                        <img class="img-responsive" src="/Azura/res/img/home/elitis-hd.png" alt="">
                         <div class="caption">
                             <h3>ELITIS<br>
                                 <small class="text-black">Papiers peints, revêtements et tissus</small> <br>
@@ -239,13 +239,13 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="res/js/jquery.js"></script>
+    <script src="../res/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="res/js/bootstrap.min.js"></script>
+    <script src="../res/js/bootstrap.min.js"></script>
 
     <!-- Custom script -->
-    <script src="res/js/home.js"></script>
+    <script src="../res/js/home.js"></script>
 
 
 
