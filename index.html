@@ -19,9 +19,6 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<!--     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600' rel='stylesheet' type='text/css'>
- -->
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 
@@ -53,7 +50,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="navbar-text" href="about.html">Accueil</a>
+                        <a class="navbar-text" href="index.html">Accueil</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
@@ -73,21 +70,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="navbar-text" href="contact.html">Contact</a>
+                        <a class="navbar-text" href="#">Nos services</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a class="navbar-text" href="#">Nos réalisations</a>
+                    </li>
+                    <li>
+                        <a class="navbar-text" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -96,42 +85,20 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- <div class="fill" style="background-image:url('./img/home/interior_design.png');"></div> -->
-                <img class="fill" src="./img/home/carousel-slide-1.jpg">
-                <!-- <div class="carousel-caption"><h1 class="text-black">Découvrez la boutique Azura à Blois</h1></div> -->
+    <!-- About shop header -->
+    <header id="about">
+        <div class="jumbotron">
+            <div class="row">
+                <h1 class="col-lg-12 col-center">Notre boutique a Blois</h1>
             </div>
-            <div class="item">
-                <!-- <div class="fill" style="background-image:url('http://placehold.it/1600x900);"></div> -->
-                <img class="fill" src="./img/home/carousel-slide-2.jpg">
-                <!-- <div class="carousel-caption"><h1 class="text-white">De la peinture haut de gamme</h1></div> -->
-            </div>
-            <div class="item">
-                <!-- <div class="fill" style="background-image:url('http://placehold.it/1600x900);"></div> -->
-                <img class="fill" src="./img/home/carousel-slide-3.jpg">
-                <!-- <div class="carousel-caption"><h1 class="text-white">Des papiers peints de qualité</h1></div> -->
+            <div class="row">
+                <p><strong>Azura</strong>, boutique de décoration, de création et d'innovation, a été fondée en 2002 par Laëtitia Pousse. Fort de son savoir-faire, le premier mot d'ordre fût la création de cartes d'art uniques au monde, à l'aide de matériaux exceptionnels. Petit à petit, Laëtitia a fait évoluer son offre et ses services. Travaillant avec <a href="#"><strong>les marques</strong></a> les plus luxueuses,
+                elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints à la main, des tapis tressés et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur.</p>
+                <h3 style="text-align: center;"><a href="#">Nous situer sur la carte</a> - <a href="#">Nous contacter</a></h3>
             </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
     </header>
+    <!-- End About shop header -->
 
     <!-- Page Content -->
     <div class="container-fluid">
@@ -139,118 +106,81 @@
         <!-- Marketing Icons Section -->
         <section id="brands">
             <div class="row row-centered">
-                <h1 class="col-lg-12 col-center text-primary">Les marques</h1>
+                <h1 class="col-lg-12 col-center">Les marques</h1>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3">
                 <div class="thumbnail">
                     <img class="img-responsive" src="./img/home/farrow-and-ball.png" alt="">
                     <div class="caption">
                         <h3>Farrow & Ball<br>
-                            <small>Peintures écologiques et papiers peints</small>
+                            <small class="text-black">Peintures écologiques et papiers peints</small> <br>
                         </h3>
-                        <p>
-                            Farrow & Ball fabrique de la peinture dans le Dorset, bain par bain, depuis 1946, et reste l'une des rares entreprises qui continue à fabriquer une gamme complète de finitions traditionnelles et modernes de la plus haute qualité. Toutes leurs peintures sont respectueuses de l'environnement et sont conformes à la législation environnementale européenne la plus récente.
+                        <h4><a href="#">Découvrir la gamme</a></h4>
+                        <p class="text-black">
+                            Farrow & Ball fabrique de la peinture dans le Dorset, bain par bain, depuis 1946, et reste l'une des rares entreprises qui continue à fabriquer une gamme complète de finitions traditionnelles et modernes de la plus haute qualité. Toutes leurs peintures sont respectueuses de l'environnement et sont conformes à la législation environnementale européenne la plus récente. <br>
                         </p>
-                        <a href="#" class="btn btn-primary center-block">Découvrir</a>
                     </div>
                 </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3">
                     <div class="thumbnail">
                         <img class="img-responsive" src="./img/home/little-green.png" alt="">
                         <div class="caption">
                             <h3>Little Green<br>
-                                <small>Peintures écologiques et papiers peints</small>
+                                <small class="text-black">Peintures écologiques et papiers peints</small> <br>
                             </h3>
-                            <p>
-                                Little Greene est un fabricant de peinture anglaise, indépendant, fortement impliqué socialement et écologiquement dans la fabrication de peinture et de papiers peints de haute qualité. Les papiers peints Little Greene sont un beau complément à la palette de peinture. Chaque collection très spécifique emploie des méthodes d’impression particulières utilisées pour la fabrication des plus beaux papiers de qualité.
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <p class="text-black">
+                                Little Greene est un fabricant de peinture anglaise, indépendant, fortement impliqué socialement et écologiquement dans la fabrication de peinture et de papiers peints de haute qualité. Les papiers peints Little Greene sont un beau complément à la palette de peinture. Chaque collection très spécifique emploie des méthodes d’impression particulières utilisées pour la fabrication des plus beaux papiers de qualité. <br>
                             </p>
-                            <a href="#" class="btn btn-primary center-block">Découvrir</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3">
                     <div class="thumbnail">
                         <img class="img-responsive" src="./img/home/bochart.png" alt="">
                         <div class="caption">
                             <h3>Toulemonde Bochart<br>
-                                <small>Tapis</small>
+                                <small class="text-black">Tapis</small> <br>
                             </h3>
-                            <p>
-                                Au départ entreprise textile familiale, Toulemonde Bochart se spécialise dès le début des années 1970 dans l’univers de la maison, en offrant à sa clientèle des collections créatives et innovantes. Début 1980, Toulemonde Bochart confie la création de lignes complètes à des designers reconnus parmi les plus talentueux, ainsi qu’à de jeunes créateurs souhaitant s’exprimer sur un produit aux possibilités multiples. 
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <p class="text-black">
+                                Au départ entreprise textile familiale, Toulemonde Bochart se spécialise dès le début des années 1970 dans l’univers de la maison, en offrant à sa clientèle des collections créatives et innovantes. Début 1980, Toulemonde Bochart confie la création de lignes complètes à des designers reconnus parmi les plus talentueux, ainsi qu’à de jeunes créateurs souhaitant s’exprimer sur un produit aux possibilités multiples. <br>
                             </p>
-                            <a href="#" class="btn btn-primary center-block">Découvrir</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3">
                     <div class="thumbnail">
                         <img class="img-responsive" src="./img/home/elitis.png" alt="">
                         <div class="caption">
                             <h3>ELITIS<br>
-                                <small>Papiers peints, revêtements et tissus</small>
+                                <small class="text-black">Papiers peints, revêtements et tissus</small> <br>
                             </h3>
-                            <p>
-                                C'est en 1988, à Toulouse, que Patrice Marraud des Grottes lance la maison d'édition de tissus Élitis. Cet explorateur du textile et du revêtement mural innove sans cesse. Si le lin, traité de mille manières, a été le point de départ de la maison, il en reste l'un des fils conducteurs. Mais, aujourd'hui, toutes les créations audacieuses issues du studio interne portent la signature d'Élitis : tressage de cuir, jersey contrecollé et lin brodé.
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <p class="text-black">
+                                C'est en 1988, à Toulouse, que Patrice Marraud des Grottes lance la maison d'édition de tissus Élitis. Cet explorateur du textile et du revêtement mural innove sans cesse. Si le lin, traité de mille manières, a été le point de départ de la maison, il en reste l'un des fils conducteurs. Mais, aujourd'hui, toutes les créations audacieuses issues du studio interne portent la signature d'Élitis : tressage de cuir, jersey contrecollé et lin brodé. <br>
                             </p>
-                            <a href="#" class="btn btn-primary center-block">Découvrir</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- /.row -->
+        <!-- End of brands section with thumbnails  -->
 
-        <!-- About section -->
-        <section id="about">
-            <div class="row row-centered">
-                <h1 class="text-black">Notre boutique a <span class="text-white">Blois</span></h1>
-                <div class="jumbotron col-md-8 col-centered">
-                        <div class="col-lg-2">
-                            <img src="http://placehold.it/170x240">
-                        </div>
-                        <div class="col-lg-10">
-                            <p><strong>Azura</strong>, boutique de décoration, de création et d'innovation, a été fondée en 2002 par Laëtitia Pousse. Fort de son savoir-faire, le premier mot d'ordre fût la création de cartes d'art uniques au monde, à l'aide de matériaux exceptionnels. Petit à petit, Laëtitia a fait évoluer son offre et ses services. Travaillant avec <a href="#"><strong>les marques</strong></a> les plus luxueuses,
-                            elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints à la main, des tapis tressés et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur.</p>
-                            <p class="align-right"><a href="#">Nous situer sur la carte</a> - <a href="#">Nous contacter</a></p>
-                        </div>
-                </div>
+
+        <section id="last-achievement">
+            <div class="row">
+                <!-- TO DO  -->
             </div>
         </section>
-        <!-- /.row -->
-
-        <!-- Map Section -->
-<!--         <section id="map">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="page-header">Modern Business Features</h2>
-                </div>
-                <div class="col-md-6">
-                    <p>The Modern Business template by Start Bootstrap includes:</p>
-                    <ul>
-                        <li><strong>Bootstrap v3.2.0</strong>
-                        </li>
-                        <li>jQuery v1.11.0</li>
-                        <li>Font Awesome v4.1.0</li>
-                        <li>Working PHP contact form with validation</li>
-                        <li>Unstyled page elements for easy customization</li>
-                        <li>17 HTML pages</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="http://placehold.it/700x450" alt="">
-                </div>
-            </div>
-        </section> -->
-        <!-- /.row -->
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; <a href="http://lucas-willemot.fr">Lucas Willemot</a></p>
                 </div>
             </div>
         </footer>
@@ -264,12 +194,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+    <!-- Custom script -->
+    <script src="js/home.js"></script>
+
+
 
 </body>
 

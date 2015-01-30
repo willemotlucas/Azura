@@ -111,28 +111,31 @@ footer {
     margin-right:-4px;
 }
 
+.container-fluid {
+    /*padding: 0 15px 0 0;*/
+}
 
 /*
- * HOME PAGE
+ * 
+ * GENERAL STYLE
  *
- */
+ *
+*/
 
-/* #brands h1, h2 {
-    font-family: 'Basic Title Font', sans-serif;
-    font-weight: 300;
- }*/
+.align-center {
+    text-align: center;
+}
 
- #brands h3 {
-    font-family: 'Roboto','Source Sans Pro', sans-serif;
-    font-weight: 500;
- }
+.align-right {
+    text-align: right;
+}
 
 .text-black {
-  color: black;
+    color: #000000;
 }
 
 .text-white {
-    color: white;
+    color: #FFFFFF;
 }
 
 a.navbar-text {
@@ -140,47 +143,44 @@ a.navbar-text {
     font-weight: bold;
 }
 
-section h1 {
-    margin: 70px 0 70px 0;
-    font-family: 'Basic Title Font', sans-serif;
+
+/*
+ * 
+ * HOME PAGE
+ *
+ */
+
+section h1, header h1 {
+    margin: 3% 0 3% 0;
+    font-family: 'basic_title_fontregular', 'Source Sans Pro', sans-serif;
     font-size: 80px;
     font-weight: bold;
 }
 
-.align-right {
-    text-align: right;
-}
-
-/*
- * BRANDS SECTION
- */
-
-#brands .row, #brands .thumbnail {
-    background-color: #F7F7F7;
-}
-
-#brands .thumbnail {
-    border: 0px;
-    margin-bottom: 70px;
-    text-align: justify; 
-}
 
 /*
  * ABOUT SECTION
  */
 
-#about .row {
+#about{
     background-image: url('../img/home/about-background2.jpg');
 }
 
 #about .jumbotron {
-    background-color: rgba(34, 34, 34, 0.85);
-    border: none;
+    background-color: rgba(34, 34, 34, 0.7);
+    border: 0;
+    padding: 3%;
+    margin-bottom: 0px;
 }
 
-#about .jumbotron p, #about .jumbotron h1 {
+#about .jumbotron p {
     color: #FFFFFF;
     text-align: justify;
+}
+
+#about .jumbotron h1 {
+    color: #FFFFFF;
+    text-align: center;
 }
 
 #about .jumbotron img {
@@ -189,4 +189,32 @@ section h1 {
 
 #about h1 {
     display: inline-block;
+}
+
+
+/*
+ * BRANDS SECTION
+ */
+
+#brands {
+    background-image: url('../img/home/brands-background.jpg');
+    background-repeat: repeat;
+}
+
+#brands h3 {
+    font-family: 'Roboto','Source Sans Pro', sans-serif;
+    font-weight: 500;
+ }
+
+#brands .thumbnail {
+    border: 0px;
+    margin: 0 3% 15% 3%;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#brands h4 {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 8% 0 8% 0;
 }
