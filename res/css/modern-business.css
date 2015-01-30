@@ -168,6 +168,12 @@ li a.navbar-text {
     color: #158cba;
 }
 
+#menu .navbar-text {
+    margin-left: 0px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
 /*
  *
  * FOOTER STYLE

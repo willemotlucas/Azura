@@ -118,5 +118,9 @@
 
 	    <!-- Bootstrap Core JavaScript -->
 	    <script src="../res/js/bootstrap.min.js"></script>
+
+	    <!-- For text fielder validation -->
+	    <script src="../res/js/jqBootstrapValidation.js"></script>
+	    <script src="../res/js/contact_me.js"></script>
 	</body>
 </html>
