@@ -18,7 +18,7 @@
                         <a class="navbar-text" href="/Azura/accueil/">Accueil</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
+                        <a href="" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#">Farrow & Ball</a>

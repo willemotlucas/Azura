@@ -53,7 +53,7 @@
             <div class="row">
                 <p><strong>Azura</strong>, boutique de décoration, de création et d'innovation, a été fondée en 2002 par Laëtitia Pousse. Fort de son savoir-faire, le premier mot d'ordre fût la création de cartes d'art uniques au monde, à l'aide de matériaux exceptionnels. Petit à petit, Laëtitia a fait évoluer son offre et ses services. Travaillant avec <a href="#"><strong>les marques</strong></a> les plus luxueuses,
                 elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints à la main, des tapis tressés et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur, et vous accompagne dans la réalisation de vos travaux de rénovation.</p>
-                <h3 style="text-align: center;"><a href="#">Nous situer sur la carte</a> - <a href="#">Nous contacter</a></h3>
+                <h3 style="text-align: center;"><a href="/Azura/contact/">Nous situer sur la carte</a> - <a href="/Azura/contact/#contact-form">Nous contacter</a></h3>
             </div>
         </div>
     </header>
@@ -152,9 +152,9 @@
                     <div class="col-lg-12">
                         <h2 class="text-white">Le salon de Julien</h2>
                         <blockquote>
-                            <p class="text-justify">"Cela faisait 10 ans que je n'avais pas renouvelé la peinture de mon salon, c'était devenu un peu trop vieillot à mon goût. J'ai contacté Laëtitia, qui a tout de suite pris en charge mon projet de rénovation. Ses conseils en décoration ont été très précieux, d'autant plus qu'elle travaille avec des produits de qualité ! Je suis ravi du résultat, et je n'hésiterai pas à faire appel à nouveau à AZURA pour la décoration des autres de pièces de ma maison. Un grand merci !"</p>
+                            <p class="text-justify">"Cela faisait 10 ans que je n'avais pas renouvelé la peinture de mon salon, c'était devenu un peu trop vieillot à mon goût. J'ai contacté Laëtitia, qui a tout de suite pris en charge mon projet de rénovation. Ses conseils en décoration ont été très précieux, d'autant plus qu'elle travaille avec des produits de qualité ! Je suis ravi du résultat, et je n'hésiterai pas à faire appel à nouveau à AZURA pour la décoration des autres de pièces de ma maison. Un grand merci !" <a href="Azura/realisations/">Voir nos autres travaux</a></p>
                         </blockquote>
-                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="#">contactez-nous</a> !</h3>
+                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="/Azura/contact/#contact-form">contactez-nous</a> !</h3>
                     </div>
                 </div>
             </div>

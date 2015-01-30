@@ -176,6 +176,7 @@ li a.navbar-text {
 
 #footer {
     background-color: #FFFFFF;
+    border-top: 4px solid #e6e6e6;
 }
 
 #footer p {
