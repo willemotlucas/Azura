@@ -20,6 +20,7 @@
 
 	    <!-- Custom CSS -->
 	    <link href="/Azura/res/css/modern-business.css" rel="stylesheet">
+	    <link href="/Azura/res/css/contact.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
 	    <link href="/Azura/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -38,10 +39,9 @@
 		<?php include("includes/menu.php"); ?>
 
 		<div class="container-fluid">
-			<section id="contact">
+			<section id="map">
 				<div class="row row-centered">
 					<h1 class="col-lg-12 col-center">Rendez nous visite ...</h1>
-					<h2 class="col-lg-12 col-center">Si vous souhaitez commander un produit, remplissez le <a href="#">formulaire de commande.</a></h2>
 				</div>
 
 				<div class="row">
@@ -64,13 +64,16 @@
                     	<abbr title="Heure d'ouverture">Ouverture</abbr>: Mardi - Samedi: 10:00 à 19:00</p>
 					</div>
 				</div>
+			</section>
 
+			<section id="contact-form">
 				<!-- Contact form -->
 				<div class="row">
-<!-- 					<div class="col-lg-offset-2 col-lg-10"> -->
+					<div class="jumbotron">
 						<div class="row row-centered">
 							<div class="col-lg-12 col-center">
 								<h1>... ou envoyez-nous un message !</h1>
+								<h2 class="col-lg-12 col-center">Si vous souhaitez commander un produit, remplissez le <a href="#">formulaire de commande.</a></h2>
 							</div>
 						</div>
 						<form name="sentMessage" id="contactForm" novalidate>
@@ -102,6 +105,7 @@
 	                            </div>
 	                        <!-- </div> -->
                     	</form>
+                    </div>
             		<!-- </div>	 -->
 				</div>
 			</section>
