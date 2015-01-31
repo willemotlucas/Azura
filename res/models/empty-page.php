@@ -16,13 +16,13 @@
 	    <title>AZURA, boutique de décoration d'intérieur à Blois</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="res/css/lumen_bootstrap.css" rel="stylesheet">
+	    <link href="/Azura/res/css/lumen_bootstrap.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
-	    <link href="res/css/modern-business.css" rel="stylesheet">
+	    <link href="/Azura/res/css/modern-business.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
-	    <link href="res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="/Azura/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 	    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 
