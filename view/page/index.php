@@ -6,8 +6,8 @@
         </div>
         <div class="row">
             <p><strong>Azura</strong>, boutique de décoration, de création et d'innovation, a été fondée en 2002 par Laëtitia Pousse. Fort de son savoir-faire, le premier mot d'ordre fût la création de cartes d'art uniques au monde, à l'aide de matériaux exceptionnels. Petit à petit, Laëtitia a fait évoluer son offre et ses services. Travaillant avec <a href="#"><strong>les marques</strong></a> les plus luxueuses,
-            elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints à la main, des tapis tressés et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur, et vous accompagne dans la réalisation de vos travaux de rénovation.</p>
-            <h3 style="text-align: center;"><a href="#">Nous situer sur la carte</a> - <a href="#">Nous contacter</a></h3>
+            elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints de grande qualité, des tapis, divers textiles et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur, et vous accompagne dans la réalisation de vos travaux de rénovation.</p>
+            <h3 style="text-align: center;"><a href="/Azura/page/contact">Nous situer sur la carte</a> - <a href="/Azura/page/contact#contact-form">Nous contacter</a></h3>
         </div>
     </div>
 </header>
@@ -24,7 +24,7 @@
         <div id="thumbnail-container" class="row">
             <div class="col-lg-3 col-md-6">
             <div class="thumbnail">
-                <img class="img-responsive" src="/AzuraMVC/webroot/img/home/farrow-and-ball.png" alt="">
+                <img class="img-responsive" src="/Azura/webroot/img/home/farrow-and-ball.png" alt="">
                 <div class="caption">
                     <h3>Farrow & Ball<br>
                         <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="/AzuraMVC/webroot/img/home/little-green-hd.png" alt="">
+                    <img class="img-responsive" src="/Azura/webroot/img/home/little-green-hd.png" alt="">
                     <div class="caption">
                         <h3 id="little">Little Green<br>
                             <small class="text-black">Peintures écologiques et papiers peints</small> <br>
@@ -52,7 +52,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="/AzuraMVC/webroot/img/home/bochart-hd.png" alt="">
+                    <img class="img-responsive" src="/Azura/webroot/img/home/bochart-hd.png" alt="">
                     <div class="caption">
                         <h3>Toulemonde Bochart<br>
                             <small class="text-black">Tapis</small> <br>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="/AzuraMVC/webroot/img/home/elitis-hd.png" alt="">
+                    <img class="img-responsive" src="/Azura/webroot/img/home/elitis-hd.png" alt="">
                     <div class="caption">
                         <h3>ELITIS<br>
                             <small class="text-black">Papiers peints, revêtements et tissus</small> <br>
@@ -108,11 +108,11 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="text-white">"<?php echo($achievement['title']) ?>"</h2>
+                        <h2 class="text-white"><?php echo($achievement['title']) ?></h2>
                         <blockquote>
-                            <p class="text-justify"><?php echo($achievement['testimonial']) ?> <a href="#">Voir nos autres travaux</a></p>
+                            <p class="text-justify">" <?php echo($achievement['testimonial']) ?> " <a href="/Azura/achievement/view"> Voir nos autres travaux</a></p>
                         </blockquote>
-                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="#">contactez-nous</a> !</h3>
+                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="/Azura/page/contact">contactez-nous</a> !</h3>
                     </div>
                 </div>
             </div>

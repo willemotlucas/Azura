@@ -9,13 +9,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand navbar-text" href="/AzuraMVC/page/index" style="color: #158cba;">AZURA</a>
+            <a class="navbar-brand navbar-text" href="/Azura/page/index" style="color: #158cba;">AZURA</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="navbar-text" href="/AzuraMVC/page/index">Accueil</a>
+                    <a class="navbar-text" href="/Azura/page/index">Accueil</a>
                 </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
@@ -38,13 +38,13 @@
                     <a class="navbar-text" href="#">Nos services</a>
                 </li>
                 <li>
-                    <a class="navbar-text" href="/AzuraMVC/achievement/view">Nos réalisations</a>
+                    <a class="navbar-text" href="/Azura/achievement/view">Nos réalisations</a>
                 </li>
                 <li>
                     <a class="navbar-text" href="#">Commander un produit</a>
                 </li>
                 <li>
-                    <a class="navbar-text" href="/AzuraMVC/page/contact">Contact</a>
+                    <a class="navbar-text" href="/Azura/page/contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -52,3 +52,4 @@
     </div>
     <!-- /.container -->
 </nav>
+

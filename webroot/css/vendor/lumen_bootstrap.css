@@ -2,24 +2,24 @@
 
 @font-face {
     font-family: 'basic_title_fontregular';
-    src: url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.eot');
-    src: url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.woff2') format('woff2'),
-         url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.woff') format('woff'),
-         url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.ttf') format('truetype'),
-         url('/AzuraMVC/webroot/fonts/basictitlefont-webfont.svg#basic_title_fontregular') format('svg');
+    src: url('/Azura/webroot/fonts/basictitlefont-webfont.eot');
+    src: url('/Azura/webroot/fonts/basictitlefont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Azura/webroot/fonts/basictitlefont-webfont.woff2') format('woff2'),
+         url('/Azura/webroot/fonts/basictitlefont-webfont.woff') format('woff'),
+         url('/Azura/webroot/fonts/basictitlefont-webfont.ttf') format('truetype'),
+         url('/Azura/webroot/fonts/basictitlefont-webfont.svg#basic_title_fontregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'kg_chasing_carsregular';
-    src: url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.eot');
-    src: url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.woff2') format('woff2'),
-         url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.woff') format('woff'),
-         url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.ttf') format('truetype'),
-         url('/AzuraMVC/webroot/fonts/kgchasingcars-webfont.svg#kg_chasing_carsregular') format('svg');
+    src: url('/Azura/webroot/fonts/kgchasingcars-webfont.eot');
+    src: url('/Azura/webroot/fonts/kgchasingcars-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Azura/webroot/fonts/kgchasingcars-webfont.woff2') format('woff2'),
+         url('/Azura/webroot/fonts/kgchasingcars-webfont.woff') format('woff'),
+         url('/Azura/webroot/fonts/kgchasingcars-webfont.ttf') format('truetype'),
+         url('/Azura/webroot/fonts/kgchasingcars-webfont.svg#kg_chasing_carsregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

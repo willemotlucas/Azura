@@ -11,7 +11,7 @@
  */
 
 #about{
-    background-image: url('/AzuraMVC/webroot/img/home/about-background2.jpg');
+    background-image: url('/Azura/webroot/img/home/about-background2.jpg');
     background-position: 30%;
 }
 
@@ -46,7 +46,7 @@
  */
 
 #brands {
-    background-image: url('/AzuraMVC/webroot/img/home/brands-background.jpg');
+    background-image: url('/Azura/webroot/img/home/brands-background.jpg');
     background-repeat: repeat;
 }
 
@@ -79,7 +79,7 @@
  */
 
 #last-achievement {
-    background-image: url('/AzuraMVC/webroot/img/home/last-achievement-background.jpg');
+    background-image: url('/Azura/webroot/img/home/last-achievement-background.jpg');
     background-position: 0% 30%;
     padding-bottom: 3%
 }

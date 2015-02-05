@@ -18,10 +18,10 @@
     <title>AZURA, boutique de décoration d'intérieur à Blois</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/AzuraMVC/webroot/css/vendor/lumen_bootstrap.css" rel="stylesheet">
+    <link href="/Azura/webroot/css/vendor/lumen_bootstrap.css"  rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/AzuraMVC/webroot/css/vendor/modern-business.css" rel="stylesheet">
+    <link href="/Azura/webroot/css/vendor/modern-business.css" rel="stylesheet">
     <?php  
     if($css != null)
     {
@@ -49,10 +49,10 @@
     <?php include(ROOT.DS."view/includes/footer.php"); ?>
 
     <!-- jQuery -->
-    <script src="/AzuraMVC/webroot/js/vendor/jquery.js"></script>
+    <script src="/Azura/webroot/js/vendor/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/AzuraMVC/webroot/js/vendor/bootstrap.min.js"></script>
+    <script src="/Azura/webroot/js/vendor/bootstrap.min.js"></script>
 
     <!-- Custom Scripts -->
     <?php

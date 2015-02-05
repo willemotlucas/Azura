@@ -21,7 +21,7 @@
 	                                </label>
 	                            </div>
 	                            <!-- Change this to a button or input when using this as a form -->
-	                        	<button class="btn btn-lg btn-success btn-block" type="submit" formaction="/AzuraMVC/admin/login">Se connecter</button>
+	                        	<button class="btn btn-lg btn-success btn-block" type="submit" formaction="/Azura/admin/login">Se connecter</button>
 	                        </fieldset>
 	                    </form>
 	                </div>

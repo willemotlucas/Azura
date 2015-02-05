@@ -14,14 +14,14 @@
 				<p>12 Rue Emile Laurens <br> 41000 Blois</p>
 
 				<p><i class="fa fa-phone"></i> 
-            	<abbr title="Téléphone">T</abbr>: 02.54.78.72.63</p>
+            	Téléphone</abbr>: 02.54.78.72.63</p>
 
         		<p><i class="fa fa-envelope-o"></i> 
-            	<abbr title="Email">E</abbr>: <a href="willemotlucas@gmail.com">contact@azurablois.com</a>
+            	E-mail: <a href="willemotlucas@gmail.com">contact@azurablois.com</a>
         		</p>
 
         		<p><i class="fa fa-clock-o"></i> 
-            	<abbr title="Heure d'ouverture">Ouverture</abbr>: Mardi - Samedi: 10:00 à 19:00</p>
+            	Ouverture</abbr>: Mardi - Samedi: 10:00 à 19:00</p>
 			</div>
 		</div>
 	</section>
