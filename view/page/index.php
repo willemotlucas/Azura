@@ -83,7 +83,7 @@
     <!-- End of brands section with thumbnails  -->
 
     <?php 
-    if($achievement != null)
+    if(isset($achievement))
     {    
     ?>
         <!-- The last achievment section -->
@@ -108,9 +108,9 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="text-white"><?php echo($achievement['title']) ?></h2>
+                        <h2 class="text-white"><?php echo($achievement->title) ?></h2>
                         <blockquote>
-                            <p class="text-justify">" <?php echo($achievement['testimonial']) ?> " <a href="/Azura/achievement/view"> Voir nos autres travaux</a></p>
+                            <p class="text-justify">" <?php echo($achievement->testimonial) ?> " <a href="/Azura/achievement/view"> Voir nos autres travaux</a></p>
                         </blockquote>
                         <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="/Azura/page/contact">contactez-nous</a> !</h3>
                     </div>

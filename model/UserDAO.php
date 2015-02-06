@@ -2,11 +2,11 @@
 
 class UserDAO
 {
-	private $con;
+/*	private $con;
 
 	public function __construct()
 	{
-		$db = Database::getInstance();
+		//$db = Database::getInstance();
 		$this->con = $db->getDbh();
 	}
 
@@ -23,7 +23,7 @@ class UserDAO
 	public function getUserByLogin($login)
 	{
 		return $this->con->query("SELECT * FROM users WHERE login='" . $login . "'");
-	}
+	}*/
 }
 
 ?>

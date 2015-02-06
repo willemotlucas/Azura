@@ -2,11 +2,11 @@
 
 class AchievementDAO
 {
-	private $con;
+/*	private $con;
 
 	public function __construct()
 	{
-		$db = Database::getInstance();
+		//$db = Database::getInstance();
 		$this->con = $db->getDbh();
 	}
 
@@ -23,7 +23,7 @@ class AchievementDAO
 	public function getLastAchievement()
 	{
 		return $this->con->query("SELECT title, testimonial FROM achievements ORDER BY id DESC LIMIT 1");
-	}
+	}*/
 }
 
 ?>

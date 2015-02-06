@@ -7,9 +7,9 @@ class AchievementController extends Controller
 	public $AchievementDAO; 
 	function view()
 	{
-		$AchievementDAO = new AchievementDAO();
+		//$AchievementDAO = new AchievementDAO();
 		
-		$this->set('achievements', $AchievementDAO->getAllAchievements()->fetchAll());
+		//$this->set('achievements', $AchievementDAO->getAllAchievements()->fetchAll());
 		$this->layout->addCssFile('css', array(
 			'view' => '<link href="/Azura/webroot/css/achievement/view.css" rel="stylesheet">'
 			));
@@ -24,8 +24,8 @@ class AchievementController extends Controller
 
 	function edit($id)
 	{
-		$AchievementDAO = new AchievementDAO();
-		$this->set('achievement', $AchievementDAO->getAchievementById($id)->fetch());
+		//$AchievementDAO = new AchievementDAO();
+		//$this->set('achievement', $AchievementDAO->getAchievementById($id)->fetch());
 
 		$this->render('edit');
 	}

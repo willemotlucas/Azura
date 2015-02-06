@@ -11,8 +11,8 @@ class AdminController extends Controller
 			$login = htmlspecialchars($_POST['login']);
 			$password = htmlspecialchars($_POST['password']);
 			
-			$UserDAO = new UserDAO();
-			$user = $UserDAO->getUserByLogin($login)->fetch();
+			//$UserDAO = new UserDAO();
+			//$user = $UserDAO->getUserByLogin($login)->fetch();
 
 			$password = hash('sha512', $password);
 			if($password == $user['password'])

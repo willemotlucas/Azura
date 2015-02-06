@@ -23,7 +23,7 @@
     <!-- Custom CSS -->
     <link href="/Azura/webroot/css/vendor/modern-business.css" rel="stylesheet">
     <?php  
-    if($css != null)
+    if(isset($css))
     {
         foreach($css as $key => $value)
             echo($css[$key]); 
@@ -56,7 +56,7 @@
 
     <!-- Custom Scripts -->
     <?php
-    if($js != null)
+    if(isset($js))
     {
         foreach($js as $key => $value)
             echo($js[$key]);
