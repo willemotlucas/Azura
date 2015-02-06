@@ -10,7 +10,7 @@ class Dispatcher {
 		$controller = $this->loadController();
 		
 		//404 Error if unknown controller
-		if(!in_array($this->request->action, get_class_methods($controller)))
+		if(!in_array($this->request->action, array_diff(get_class_methods($controller), get_class_methods('Controller'))))
 		{
 			$this->error('Le controller ne dispose pas de cette action');
 		}

@@ -7,7 +7,7 @@
         <div class="row">
             <p><strong>Azura</strong>, boutique de décoration, de création et d'innovation, a été fondée en 2002 par Laëtitia Pousse. Fort de son savoir-faire, le premier mot d'ordre fût la création de cartes d'art uniques au monde, à l'aide de matériaux exceptionnels. Petit à petit, Laëtitia a fait évoluer son offre et ses services. Travaillant avec <a href="#"><strong>les marques</strong></a> les plus luxueuses,
             elle vous propose à présent des peintures écologiques haut de gamme, des papiers peints de grande qualité, des tapis, divers textiles et autres objets de décoration. Diplômée de l'ETIC, elle vous offre également <a href="#"><strong>ses services</strong></a> en conseil et en décoration d'intérieur, et vous accompagne dans la réalisation de vos travaux de rénovation.</p>
-            <h3 style="text-align: center;"><a href="/Azura/page/contact">Nous situer sur la carte</a> - <a href="/Azura/page/contact#contact-form">Nous contacter</a></h3>
+            <h3 style="text-align: center;"><a href=<?php echo '"' . BASE_URL . '/page/contact"'?>>Nous situer sur la carte</a> - <a href=<?php echo '"' . BASE_URL . '/page/contact#contact-form"'?>>Nous contacter</a></h3>
         </div>
     </div>
 </header>
@@ -110,9 +110,9 @@
                     <div class="col-lg-12">
                         <h2 class="text-white"><?php echo($achievement->title) ?></h2>
                         <blockquote>
-                            <p class="text-justify">" <?php echo($achievement->testimonial) ?> " <a href="/Azura/achievement/view"> Voir nos autres travaux</a></p>
+                            <p class="text-justify">" <?php echo($achievement->testimonial) ?> " <a href=<?php echo '"' . BASE_URL . '/achievement/view"'?>> Voir nos autres travaux</a></p>
                         </blockquote>
-                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href="/Azura/page/contact">contactez-nous</a> !</h3>
+                        <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href=<?php echo '"' . BASE_URL . '/page/contact"'?>>contactez-nous</a> !</h3>
                     </div>
                 </div>
             </div>

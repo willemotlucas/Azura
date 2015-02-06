@@ -6,10 +6,10 @@ class PageController extends Controller
 	{
 		// set the css and js files for the specific view
 		$this->layout->addCssFile('css', array(
-			'index' => '<link href="/Azura/webroot/css/page/index.css" rel="stylesheet">'
+			'index' => '<link href="' .BASE_URL. '/webroot/css/page/index.css" rel="stylesheet">'
 		));
 		$this->layout->addJsFile('js', array(
-			'index' => '<script src="/Azura/webroot/js/page/page.js"></script>'
+			'index' => '<script src="' .BASE_URL. '/webroot/js/page/page.js"></script>'
 		));
 
 		$this->loadModel('Achievement');
@@ -24,7 +24,7 @@ class PageController extends Controller
 	function contact()
 	{
 		$this->layout->addCssFile('css', array(
-			'contact' => '<link href="/Azura/webroot/css/page/contact.css" rel="stylesheet">'
+			'contact' => '<link href="' .BASE_URL. '/webroot/css/page/contact.css" rel="stylesheet">'
 		));
 
 		$this->render('contact');
@@ -33,7 +33,7 @@ class PageController extends Controller
 	function admin()
 	{
 		$this->layout->addCssFile('css', array(
-			'login' => '<link href="/Azura/webroot/css/page/login.css" rel="stylesheet">'));
+			'login' => '<link href="' .BASE_URL. '/webroot/css/page/login.css" rel="stylesheet">'));
 		
 		$this->render('login');
 	}

@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="navbar-text" href="/Azura/page/index">Accueil</a>
+                    <a class="navbar-text" href=<?php echo '"' . BASE_URL . '/page/index"'?>>Accueil</a>
                 </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle navbar-text" data-toggle="dropdown">Les marques<b class="caret"></b></a>
@@ -44,7 +44,7 @@
                     <a class="navbar-text" href="#">Commander un produit</a>
                 </li>
                 <li>
-                    <a class="navbar-text" href="/Azura/page/contact">Contact</a>
+                    <a class="navbar-text" href=<?php echo '"' . BASE_URL . '/page/contact"'?>>Contact</a>
                 </li>
             </ul>
         </div>

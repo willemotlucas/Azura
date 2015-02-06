@@ -1,68 +1,68 @@
 <html lang="fr">
 
-<head>
+    <head>
 
-    <!-- 
-        Responsive wbesite developed by Lucas WILLEMOT for AZURA
-        Based on famous bootstrap Twitter framework, thanks to them !
+        <!-- 
+            Responsive wbesite developed by Lucas WILLEMOT for AZURA
+            Based on famous bootstrap Twitter framework, thanks to them !
 
-        Look my personnal website at : http://lucas-willemot.fr
-     -->
+            Look my personnal website at : http://lucas-willemot.fr
+         -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>AZURA, boutique de décoration d'intérieur à Blois</title>
+        <title>AZURA, boutique de décoration d'intérieur à Blois</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="/Azura/webroot/css/vendor/lumen_bootstrap.css"  rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href= <?php echo '"' . BASE_URL . '/webroot/css/vendor/lumen_bootstrap.css"'?> rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="/Azura/webroot/css/vendor/modern-business.css" rel="stylesheet">
-    <?php  
-    if(isset($css))
-    {
-        foreach($css as $key => $value)
-            echo($css[$key]); 
-    }
-    ?>      
+        <!-- Custom CSS -->
+        <link href= <?php echo '"' . BASE_URL . '/webroot/css/vendor/modern-business.css"'?> rel="stylesheet">
+        <?php  
+        if(isset($css))
+        {
+            foreach($css as $key => $value)
+                echo($css[$key]); 
+        }
+        ?>      
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-<body>
+    <body>
 
-    <?php include(ROOT.DS."view/includes/menu.php"); ?>
+        <?php include(ROOT.DS."view/includes/menu.php"); ?>
 
-    <!-- Page Content -->
-    <?php echo $content_for_layout; ?>
-    <!-- /.container -->
+        <!-- Page Content -->
+        <?php echo $content_for_layout; ?>
+        <!-- /.container -->
 
-    <?php include(ROOT.DS."view/includes/footer.php"); ?>
+        <?php include(ROOT.DS."view/includes/footer.php"); ?>
 
-    <!-- jQuery -->
-    <script src="/Azura/webroot/js/vendor/jquery.js"></script>
+        <!-- jQuery -->
+        <script src= <?php echo '"' . BASE_URL .  '/webroot/js/vendor/jquery.js"'?>></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/Azura/webroot/js/vendor/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src= <?php echo '"' . BASE_URL .  '/webroot/js/vendor/bootstrap.min.js"'?>></script>
 
-    <!-- Custom Scripts -->
-    <?php
-    if(isset($js))
-    {
-        foreach($js as $key => $value)
-            echo($js[$key]);
-    }
-    ?>
+        <!-- Custom Scripts -->
+        <?php
+        if(isset($js))
+        {
+            foreach($js as $key => $value)
+                echo($js[$key]);
+        }
+        ?>
 
-</body>
+    </body>
 
 </html>

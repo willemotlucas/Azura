@@ -10,7 +10,7 @@ class AchievementController extends Controller
 		$this->set('achievements', $achievements);
 
 		$this->layout->addCssFile('css', array(
-			'view' => '<link href="/Azura/webroot/css/achievement/view.css" rel="stylesheet">'
+			'view' => '<link href="' .BASE_URL. '/webroot/css/achievement/view.css" rel="stylesheet">'
 			));
 
 		$this->render('view');

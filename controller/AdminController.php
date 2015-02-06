@@ -48,8 +48,6 @@ class AdminController extends Controller
 	{
 		if(isset($_SESSION['user_id']) && isset($_SESSION['username']) && isset($_SESSION['login_string']))
 		{
-        	$this->layout->addCssFile('css', null);
-        	$this->layout->addJsFile('js', null);
         	$this->render('index');
 		}
 		else
