@@ -16,7 +16,7 @@ section h1 {
 
 #contact-form {
 /*	background-color: #cccccc;
-*/	background-image: url('/Azura/webroot/img/contact/contact-form-background.jpg');
+*/	background-image: url('../../img/contact/contact-form-background.jpg');
 	background-repeat: repeat;
 }
 
