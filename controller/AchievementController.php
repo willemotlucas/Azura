@@ -1,19 +1,17 @@
 <?php
 
-require_once(ROOT.DS.'model'.DS.'AchievementDAO.php');
-
 class AchievementController extends Controller
 {
 	public $AchievementDAO; 
 	function view()
 	{
-		//$AchievementDAO = new AchievementDAO();
-		
-		//$this->set('achievements', $AchievementDAO->getAllAchievements()->fetchAll());
+		$this->loadModel('Achievement');
+		$achievements = $this->Achievement->find();
+		$this->set('achievements', $achievements);
+
 		$this->layout->addCssFile('css', array(
 			'view' => '<link href="/Azura/webroot/css/achievement/view.css" rel="stylesheet">'
 			));
-		$this->layout->addJsFile('js', null);
 
 		$this->render('view');
 	}
@@ -24,9 +22,6 @@ class AchievementController extends Controller
 
 	function edit($id)
 	{
-		//$AchievementDAO = new AchievementDAO();
-		//$this->set('achievement', $AchievementDAO->getAchievementById($id)->fetch());
-
 		$this->render('edit');
 	}
 

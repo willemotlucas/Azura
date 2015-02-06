@@ -11,13 +11,13 @@
         <!-- /.row -->
 
         <?php 
-        if($achievements != null)
+        if(isset($achievements))
         {
 
 	        foreach ($achievements as $achievement)
 	        {
 	        	//To display a grey background
-	        	if($achievement['id']%2 == 0)
+	        	if($achievement->id%2 == 0)
 	        	{
 	        ?>
 	       			<div class="row achievement-background">
@@ -31,9 +31,9 @@
 	       		}
 	        ?>
 	        	<div class="col-lg-4 col-md-4 col-sm-4">
-	        		<h3><?php echo($achievement['title'])?></h3>
-	        		<h4><?php echo($achievement['subtitle'])?></h4>
-	        		<p><?php echo($achievement['description'])?></p>
+	        		<h3><?php echo($achievement->title)?></h3>
+	        		<h4><?php echo($achievement->subtitle)?></h4>
+	        		<p><?php echo($achievement->description)?></p>
 	        	</div>
 	        	<div class="col-lg-8 col-md-8 col-sm-8">
 

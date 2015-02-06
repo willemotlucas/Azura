@@ -57,13 +57,39 @@ class Model
 
 	}
 
-	public function find($req)
+	public function find($req = null)
 	{
 		$sql = 'SELECT * FROM ' . $this->table . ' as ' . get_class($this) . ' ';
+
+
+		//Construct the condition request
 		if(isset($req['conditions']))
 		{
-			$sql .= 'WHERE ' . $req['conditions'];
+			$sql .= 'WHERE ';
+			
+			if(is_array($req['conditions']))
+			{
+				$sql .= $req['conditions'];
+			}
+			else
+			{
+				$cond = array();
+				foreach ($req['conditions'] as $k => $v)
+				{
+					if(!is_numeric($v))
+					{
+						$v = '"' . mysql_escape_string($v) . '"';
+					}
+					$cond[] = "$k=$v";
+				}
+				$sql .= implode(' AND ', $cond); 
+			}
+			
+			$req['conditions'];
 		}
+
+
+
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 
@@ -74,6 +100,15 @@ class Model
 	{
 		return current($this->find($req));
 	}
+
+	public function findLast()
+	{
+		$sql = 'SELECT * FROM ' . $this->table . ' as ' . get_class($this) . ' ORDER BY id DESC LIMIT 1';
+		$prepare = $this->db->prepare($sql);
+		$prepare->execute();
+
+		return $prepare->fetch(PDO::FETCH_OBJ);
+	}
 }
 
- ?>
+?>
