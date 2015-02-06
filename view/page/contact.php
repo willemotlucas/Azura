@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-lg-4-offset-2 col-lg-4">
                             <div class="form-group">
-                                <textarea class="form-control" height="400" placeholder="Votre message *" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
+                                <textarea class="form-control" rows="5" placeholder="Votre message *" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
