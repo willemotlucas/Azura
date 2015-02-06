@@ -14,10 +14,11 @@
         if(isset($achievements))
         {
 
+	        $i = 1;
 	        foreach ($achievements as $achievement)
 	        {
 	        	//To display a grey background
-	        	if($achievement->id%2 == 0)
+	        	if($i%2 == 0)
 	        	{
 	        ?>
 	       			<div class="row achievement-background">
@@ -85,8 +86,32 @@
 				</div>
 			</div>
 			<?php
+				$i++;
 	       	}
 	    }
 	        ?>
+
+	    <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <?php
+                    for($i = 1; $i <= $page; $i++)
+                    {
+                    	if((isset($_GET['page']) && $_GET['page'] == $i) || (!isset($_GET['page']) && $i == 1))
+                			echo '<li class="active">';
+                		else
+                			echo '<li>';
+                	?>
+	                        <a href=<?php echo(BASE_URL . '/achievement/view?page=' . $i) ?>><?php echo $i ?></a>
+	                    </li>
+                    <?php 
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
     </section>
 </div>

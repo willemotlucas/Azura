@@ -2,7 +2,7 @@
 
 class Controller {
 
-	public $resquest;
+	public $request;
 	private $vars = array();
 	private $css = array();
 	private $js = array();
@@ -70,12 +70,12 @@ class Controller {
 		}
 	}
 
-	public function e404($message)
+	public function e404($message=null)
 	{
 		header("HTTP/1.0 404 Not Found");
 		$this->set('message', $message);
 		$this->render('/error/404');
-		
+
 		die();
 	}
 }

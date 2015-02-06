@@ -10,6 +10,7 @@ class Model
 
 
 	public $table = false;
+	public $primaryKey = 'id';
 
 	public function __construct() 
 	{
@@ -59,8 +60,25 @@ class Model
 
 	public function find($req = null)
 	{
-		$sql = 'SELECT * FROM ' . $this->table . ' as ' . get_class($this) . ' ';
+		$sql = 'SELECT ';
 
+		if(isset($req['fields']))
+		{
+			if(is_array($req['fields']))
+			{
+				$sql .= implode(', ' , $$req['fields']);
+			}
+			else
+			{
+				$sql .= $req['fields'];
+			}
+		}
+		else
+		{
+			$sql .= ' * ';
+		}
+
+		$sql .=  ' FROM ' . $this->table . ' as ' . get_class($this) . ' ';
 
 		//Construct the condition request
 		if(isset($req['conditions']))
@@ -88,7 +106,10 @@ class Model
 			$req['conditions'];
 		}
 
-
+		if(isset($req['limit']))
+		{
+			$sql .= 'LIMIT ' . $req['limit'];			
+		}
 
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
@@ -108,6 +129,17 @@ class Model
 		$prepare->execute();
 
 		return $prepare->fetch(PDO::FETCH_OBJ);
+	}
+
+	public function findCount($conditions = null)
+	{
+		$res = $this->findFirst(array(
+			'fields' => 'COUNT('.$this->primaryKey.') as count',
+			'conditions' => $conditions
+			)
+		);
+
+		return $res->count;
 	}
 }
 

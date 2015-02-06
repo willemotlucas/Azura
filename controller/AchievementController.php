@@ -5,15 +5,33 @@ class AchievementController extends Controller
 	public $AchievementDAO; 
 	function view()
 	{
+		$perPage = 1;
+
 		$this->loadModel('Achievement');
-		$achievements = $this->Achievement->find();
-		$this->set('achievements', $achievements);
+		
+		$params['achievements'] = $this->Achievement->find(
+			array(
+				'limit' => ($perPage * ($this->request->page-1)) . ',' . $perPage
+			)
+		);
+		$params['total'] = $this->Achievement->findCount();
 
-		$this->layout->addCssFile('css', array(
-			'view' => '<link href="' .BASE_URL. '/webroot/css/achievement/view.css" rel="stylesheet">'
-			));
+		if($this->request->page > $params['total'])
+		{
+			$this->e404();
+		}
+		else
+		{
+			$params['page'] = ceil($params['total']/$perPage);
+			$this->set($params);
 
-		$this->render('view');
+			$this->layout->addCssFile('css', array(
+				'view' => '<link href="' .BASE_URL. '/webroot/css/achievement/view.css" rel="stylesheet">'
+				));
+
+			$this->render('view');
+		}
+
 	}
 
 	function add()
