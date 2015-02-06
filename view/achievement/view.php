@@ -10,10 +10,9 @@
         </div>
         <!-- /.row -->
 
-        <?php 
+        <?php
         if(isset($achievements))
         {
-
 	        $i = 1;
 	        foreach ($achievements as $achievement)
 	        {
@@ -103,7 +102,7 @@
                 		else
                 			echo '<li>';
                 	?>
-	                        <a href=<?php echo(BASE_URL . '/achievement/view?page=' . $i) ?>><?php echo $i ?></a>
+	                        <a href=<?php echo('?page=' . $i) ?>><?php echo $i ?></a>
 	                    </li>
                     <?php 
                     }

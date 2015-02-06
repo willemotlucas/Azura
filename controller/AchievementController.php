@@ -31,7 +31,6 @@ class AchievementController extends Controller
 
 			$this->render('view');
 		}
-
 	}
 
 	function add()

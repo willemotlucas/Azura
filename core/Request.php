@@ -12,6 +12,7 @@ class Request {
 		{
 			if(is_numeric($_GET['page']))
 			{
+				if($_GET['page'] > 0)
 				$this->page = round($_GET['page']);
 			}
 		}
