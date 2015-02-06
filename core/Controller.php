@@ -74,6 +74,9 @@ class Controller {
 	{
 		header("HTTP/1.0 404 Not Found");
 		$this->set('message', $message);
+		$this->layout->addCssFile('css', array(
+				'view' => '<link href="' .BASE_URL. '/webroot/css/errors/404.css" rel="stylesheet">'
+				));
 		$this->render('/error/404');
 
 		die();

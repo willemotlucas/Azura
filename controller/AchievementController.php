@@ -2,7 +2,6 @@
 
 class AchievementController extends Controller
 {
-	public $AchievementDAO; 
 	function view()
 	{
 		$perPage = 1;
