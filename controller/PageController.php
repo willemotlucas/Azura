@@ -15,7 +15,7 @@ class PageController extends Controller
 		$this->loadModel('Achievement');
 		$achievement = $this->Achievement->findLast();
 
-		 $this->set('achievement', $achievement);
+		$this->set('achievement', $achievement);
 
 		//load the view and display it for the user
 		$this->render('index');
@@ -28,6 +28,14 @@ class PageController extends Controller
 		));
 
 		$this->render('contact');
+	}
+
+	function service()
+	{
+		$this->layout->addCssFile('css', array(
+			'service' => '<link href="' .BASE_URL. '/webroot/css/page/service.css" rel="stylesheet">'
+		));
+		$this->render('service');
 	}
 
 	function admin()

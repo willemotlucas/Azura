@@ -4,7 +4,7 @@ class AchievementController extends Controller
 {
 	function view()
 	{
-		$perPage = 1;
+		$perPage = 3;
 
 		$this->loadModel('Achievement');
 		

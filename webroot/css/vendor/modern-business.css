@@ -139,6 +139,14 @@ footer {
     color: #FFFFFF;
 }
 
+.text-primary {
+    color: #06809D;
+}
+
+a {
+    color: #06809D;
+}
+
 section h1, header h1 {
     margin: 0 0 3% 0;
     font-family: 'basic_title_fontregular', 'Source Sans Pro', sans-serif;

@@ -35,10 +35,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="navbar-text" href="#">Nos services</a>
+                    <a class="navbar-text" href=<?php echo '"' . BASE_URL . '/page/service"'?>>Nos services</a>
                 </li>
                 <li>
-                    <a class="navbar-text" href="/Azura/achievement/view">Nos réalisations</a>
+                    <a class="navbar-text" href=<?php echo '"' . BASE_URL . '/achievement/view"'?>>Nos réalisations</a>
                 </li>
                 <li>
                     <a class="navbar-text" href="#">Commander un produit</a>
