@@ -6,7 +6,7 @@
                 <p>Diplômée de l'ETIC, école spécialisée en communication et design graphique, et forte de son expérience, Laëtitia vous propose ses précieux conseils en création et décoration d'intérieur.</p>
                 <p>
                     Si cela fait un petit moment que votre intérieur ne vous convient plus et que vous souhaitez apporter de la nouveauté, n'hésitez plus ! Demandez les conseils d'Azura, gage d'un travail de qualité
-                    avec des marques d'exception. Si vous hésitez encore, jettez un oeil à nos <a href=<?php echo('"'.BASE_URL.'/achievement/view'.'"')?>>réalisations</a> !
+                    avec des marques d'exception. Si vous n'êtes pas encore convaincu, jettez un oeil à nos <a href=<?php echo('"'.BASE_URL.'/achievement/view'.'"')?>>réalisations</a> !
                 </p>
             </div>
         </div>
@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-lg-4">
             <div class="thumbnail">
-                <img class="img-circle img-responsive" src="/Azura/webroot/img/home/step-1-bis.jpg" alt=""/>
+                <img class="img-circle img-responsive" src="/Azura/webroot/img/home/step-1.jpg" alt=""/>
                 <div class="caption">
                     <h3>1ère étape</h3>
                     <p>

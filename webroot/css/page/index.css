@@ -64,6 +64,11 @@
     margin: 0 3% 15% 3%;
     text-align: justify;
     background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2em;
+}
+
+#brands .caption {
+    margin-bottom: 5%;
 }
 
 #brands h4 {

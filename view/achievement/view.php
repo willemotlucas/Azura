@@ -17,7 +17,7 @@
 	        foreach ($achievements as $achievement)
 	        {
 	        	//To display a grey background
-	        	if($i%2 == 0)
+	        	if($i%2 == 1)
 	        	{
 	        ?>
 	       			<div class="row achievement-background">
@@ -26,7 +26,7 @@
 	       		else
 	       		{
 	       	?>
-	       			<div class="row">
+	       			<div class="row achievement-background-color">
 	       	<?php	
 	       		}
 	        ?>

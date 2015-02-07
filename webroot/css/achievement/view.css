@@ -3,7 +3,18 @@ section h1 {
 }
 
 #achievements .achievement-background {
-	background-color: #EAE1D2/*#ecf0f1*/;
+	/*background-color: #EAE1D2/*#ecf0f1*/
+	background-image: url('../../img/achievement/one-by-two-background.jpg');
+	background-repeat: repeat;
+	color: #FFFFFF;
+}
+
+.achievement-background-color {
+	background-color: #F1F1EF;
+}
+
+.achievement-background h3 {
+	color: #FFFFFF;
 }
 
 #achievements .row {
@@ -13,10 +24,16 @@ section h1 {
 
 #achievements p {
 	text-align: justify;
+	font-size: 1.3em;
+}
+
+#achievements h1 {
+	padding-bottom: 3%;
 }
 
 #achievements h3 {
 	margin-top: 0px;
+	font-size: 2.4em;
 }
 
 #achievements img {
