@@ -63,7 +63,7 @@ $(document).ready(function() {
         changeModalDialog();
     });
 
-    setTextLearnMore("En savoir plus sur cette marque");
-    hideLearnMore();
-    showLearnMore();
+    //setTextLearnMore("En savoir plus sur cette marque");
+    //hideLearnMore();
+    //showLearnMore();
 });
