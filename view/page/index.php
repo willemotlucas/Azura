@@ -32,8 +32,8 @@
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more">
-                                <i class="fa fa-arrow-right"></i>
-                                En savoir plus sur cette marque
+                                <i class="fa fa-plus"></i>
+                                
                             </a>
                             <p class="text-black" style="display:none;">
                                 Farrow & Ball fabrique de la peinture dans le Dorset, bain par bain, depuis 1946, et reste l'une des rares entreprises qui continue à fabriquer une gamme complète de finitions traditionnelles et modernes de la plus haute qualité. Toutes leurs peintures sont respectueuses de l'environnement et sont conformes à la législation environnementale européenne la plus récente. <br>

@@ -41,8 +41,16 @@ function hideLearnMore() {
 
 function showLearnMore() {
     $('a.learn-more').click(function(){
+        $(this).next('p').css('padding-top', '3%');
         $(this).next('p').slideToggle();
         return false;
+    });
+}
+
+function setTextLearnMore(text) {
+    var links = $('a.learn-more');
+    links.each(function(){
+        $(this).text(text);
     });
 }
 
@@ -55,6 +63,7 @@ $(document).ready(function() {
         changeModalDialog();
     });
 
+    setTextLearnMore("En savoir plus sur cette marque");
     hideLearnMore();
     showLearnMore();
 });

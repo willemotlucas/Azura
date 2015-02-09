@@ -63,7 +63,7 @@
     border: 0px;
     margin: 0 3% 15% 3%;
     text-align: justify;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     font-size: 1.2em;
 }
 
@@ -75,6 +75,10 @@
     font-size: 1.6em;
     text-align: center;
     margin: 8% 0 8% 0;
+}
+
+#brands .learn-more {
+    color: #000000;
 }
 
 /*
