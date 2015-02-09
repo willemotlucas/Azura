@@ -32,12 +32,29 @@ function changeModalDialog() {
     }
 }
 
+function hideLearnMore() {
+    var paragraphs = $('.caption > p');
+    paragraphs.each(function(){
+        $(this).css('display', 'none');
+    });
+}
+
+function showLearnMore() {
+    $('a.learn-more').click(function(){
+        $(this).next('p').slideToggle();
+        return false;
+    });
+}
+
 $(document).ready(function() {
-    equalHeight($(".thumbnail"));
+    //equalHeight($(".thumbnail"));
     changeModalDialog();
     
     $(window).resize(function(){
         equalHeight($(".thumbnail"));
         changeModalDialog();
     });
+
+    hideLearnMore();
+    showLearnMore();
 });

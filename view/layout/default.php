@@ -22,6 +22,7 @@
 
         <!-- Custom CSS -->
         <link href= <?php echo '"' . BASE_URL . '/webroot/css/vendor/modern-business.css"'?> rel="stylesheet">
+        <link href= <?php echo '"' . BASE_URL . '/webroot/font-awesome/css/font-awesome.min.css"'?> rel="stylesheet">
         <?php  
         if(isset($css))
         {
