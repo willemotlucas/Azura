@@ -84,8 +84,8 @@ class Model
 		if(isset($req['conditions']))
 		{
 			$sql .= 'WHERE ';
-			
-			if(is_array($req['conditions']))
+
+			if(!is_array($req['conditions']))
 			{
 				$sql .= $req['conditions'];
 			}
@@ -111,6 +111,11 @@ class Model
 			$sql .= 'LIMIT ' . $req['limit'];			
 		}
 
+		if(isset($req['order']))
+		{
+			$sql .= ' ORDER BY ' . $req['order'];
+		}
+		debug($sql);
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

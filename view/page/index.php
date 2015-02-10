@@ -1,4 +1,4 @@
-About shop header -->
+<!-- About shop header -->
 <header id="about">
     <div class="jumbotron">
         <div class="row row-center">

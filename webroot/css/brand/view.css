@@ -1,0 +1,16 @@
+section h1 {
+	padding-top: 3%;
+}
+
+#presentation p {
+	font-size: 1.5em;
+}
+
+.thumbnail img {
+	margin-bottom: 12%;
+	margin-top: 5%;
+}
+
+p {
+	text-align: justify;
+}

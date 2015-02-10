@@ -4,17 +4,20 @@ section h1 {
 
 #achievements .achievement-background {
 	/*background-color: #EAE1D2/*#ecf0f1*/
-	background-image: url('../../img/achievement/one-by-two-background.jpg');
+	background-image: url('../../img/achievement/background-1.jpg');
 	background-repeat: repeat;
-	color: #FFFFFF;
+/*	color: #FFFFFF;*/
 }
 
 .achievement-background-color {
-	background-color: #F1F1EF;
+	/*background-color: #F1F1EF;*/
+	background-image: url('../../img/achievement/background-2.jpg');
+	background-repeat: repeat;
+
 }
 
 .achievement-background h3 {
-	color: #FFFFFF;
+	/*color: #FFFFFF;*/
 }
 
 #achievements .row {
