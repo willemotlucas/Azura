@@ -71,6 +71,10 @@
     /*margin-bottom: 5%;*/
 }
 
+#brands img {
+    height: 150px;
+}
+
 #brands h4 {
     font-size: 1.6em;
     text-align: center;
@@ -126,6 +130,10 @@
 
  @media screen and (max-width: 1366px) {
     #brands .thumbnail small {
+        font-size: 55%;
+    }
+
+    #brands .thumnail h3 {
         font-size: 55%;
     }
 

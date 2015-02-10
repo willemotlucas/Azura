@@ -115,7 +115,7 @@ class Model
 		{
 			$sql .= ' ORDER BY ' . $req['order'];
 		}
-		debug($sql);
+
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

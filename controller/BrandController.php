@@ -10,13 +10,17 @@ class BrandController extends Controller
 				);
 		$brand = $this->Brand->find($req);
 
+		if(empty($brand))
+		{
+			$this->e404();
+		}
+
 		$this->loadModel('Product');
 		$req = array(
 				'conditions' => 'Brands_id=' . $id,
 				'order' => 'num_order'
 				);
 		$products = $this->Product->find($req);
-		debug($products);
 		$nbProducts = $this->Product->findCount();
 		$nbLines = ceil($nbProducts/4);
 		$nbProductsLastLine = $nbProducts%4;
@@ -29,9 +33,6 @@ class BrandController extends Controller
 		// set the css and js files for the specific view
 		$this->layout->addCssFile('css', array(
 			'view' => '<link href="' .BASE_URL. '/webroot/css/brand/view.css" rel="stylesheet">'
-		));
-		$this->layout->addJsFile('js', array(
-			'view' => '<script src="' .BASE_URL. '/webroot/js/brand/.js"></script>'
 		));
 
 		//load the view and display it for the user

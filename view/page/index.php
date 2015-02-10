@@ -25,12 +25,12 @@
             <div id="thumbnail-container">
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="/Azura/webroot/img/home/farrow-and-ball.png" alt="">
+                        <img class="img-responsive" src="/Azura/webroot/img/home/farrow-and-ball.png" alt="Farrow & ball">
                         <div class="caption">
                             <h3>Farrow & Ball<br>
-                                <small class="text-black">Peintures écologiques et papiers peints</small> <br>
+                                <small class="text-black">Peintures écologiques et papiers peints</small> <br><br>
                             </h3>
-                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <h4><a href="/Azura/brand/view/1">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
 <!--                             <p class="text-black" style="display:none;">
                                 Farrow & Ball fabrique de la peinture dans le Dorset, bain par bain, depuis 1946, et reste l'une des rares entreprises qui continue à fabriquer une gamme complète de finitions traditionnelles et modernes de la plus haute qualité. Toutes leurs peintures sont respectueuses de l'environnement et sont conformes à la législation environnementale européenne la plus récente. <br>
@@ -40,12 +40,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
-                        <img class="img-responsive" src="/Azura/webroot/img/home/little-green-hd.png" alt="">
+                        <img class="img-responsive" src="/Azura/webroot/img/home/little-green-hd.png" alt="Little Greene">
                         <div class="caption">
                             <h3 id="little">Little Greene<br>
-                                <small class="text-black">Peintures écologiques et papiers peints</small> <br>
+                                <small class="text-black">Peintures écologiques et papiers peints</small> <br><br>
                             </h3>
-                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <h4><a href="/Azura/brand/view/2">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
 <!--                             <p class="text-black" style="display:none;">
                                 Little Greene est un fabricant de peinture anglaise, indépendant, fortement impliqué socialement et écologiquement dans la fabrication de peinture et de papiers peints de haute qualité. Les papiers peints Little Greene sont un beau complément à la palette de peinture. Chaque collection très spécifique emploie des méthodes d’impression particulières utilisées pour la fabrication des plus beaux papiers de qualité. <br>
@@ -58,7 +58,7 @@
                         <img class="img-responsive" src="/Azura/webroot/img/home/elitis-hd.png" alt="">
                         <div class="caption">
                             <h3>ELITIS<br>
-                                <small class="text-black">Papiers peints et tissus</small> <br>
+                                <small class="text-black">Papiers peints et tissus</small> <br><br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -73,7 +73,7 @@
                         <img class="img-responsive" src="/Azura/webroot/img/home/arte.png" alt="">
                         <div class="caption">
                             <h3>Arte<br>
-                                <small class="text-black">Papiers peints et revêtements muraux</small> <br>
+                                <small class="text-black">Papiers peints et revêtements muraux</small> <br><br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -110,7 +110,7 @@
                         <img class="img-responsive" src="/Azura/webroot/img/home/orac-decor.png" alt="">
                         <div class="caption">
                             <h3>Orac Décor<br>
-                                <small class="text-black">Décorations murales et corniches</small> <br>
+                                <small class="text-black">Décorations murales et corniches</small> <br><br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -127,7 +127,7 @@
                         <img class="img-responsive" src="/Azura/webroot/img/home/bochart-hd.png" alt="">
                         <div class="caption">
                             <h3>Toulemonde Bochart<br>
-                                <small class="text-black">Tapis</small> <br>
+                                <small class="text-black">Tapis</small> <br><br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -142,7 +142,7 @@
                         <img class="img-responsive" src="/Azura/webroot/img/home/hind-rabii.png" alt="">
                         <div class="caption">
                             <h3>Hind Rabii<br>
-                                <small class="text-black">Luminaires</small> <br>
+                                <small class="text-black">Luminaires</small> <br><br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -159,7 +159,7 @@
     <!-- End of brands section with thumbnails  -->
 
     <?php 
-    if(isset($achievement))
+    if(!empty($achievement))
     {    
     ?>
         <!-- The last achievment section -->
