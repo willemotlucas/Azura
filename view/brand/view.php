@@ -37,6 +37,7 @@ if(!empty($products))
 			}
 			if($j != $nbLines)
 			{
+				//We are not on the last line, so it's a standard display
 				echo('<div class="col-lg-3">' . "\r\n");
 			}
 			else

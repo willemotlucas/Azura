@@ -14,7 +14,6 @@ class PageController extends Controller
 		$nbBrandsLastLine = $nbBrands%4;
 		
 		$this->set('brands', $brands);
-		$this->set('nbBrands', $nbBrands);
 		$this->set('nbLines', $nbLines);
 		$this->set('nbBrandsLastLine', $nbBrandsLastLine);
 		$this->set('achievement', $achievement);
