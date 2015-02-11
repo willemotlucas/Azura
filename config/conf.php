@@ -15,6 +15,6 @@ class Conf
 
 }
 
-Router::prefix('cockpit', 'admin');
+Router::prefix('safehouse', 'admin');
 
 ?>

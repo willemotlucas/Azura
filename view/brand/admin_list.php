@@ -14,10 +14,6 @@
 	<div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    Marques
-                </div>
-                <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -29,6 +25,8 @@
                                     <th>Type de produits</th>
                                     <th>Logo</th>
                                     <th>En ligne</th>
+                                    <th>Modifier</th>
+                                    <th>Supprimer</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +43,8 @@
  									echo('<td> Oui </td>');
  								else
  									echo('<td> Non </td>');
+ 								echo('<td><a href="/Azura/safehouse/brand/edit/' . $brand->id . '"> Modifier </a></td>');
+ 								echo('<td><a href="/Azura/safehouse/brand/delete/' . $brand->id . '"> Supprimer </a></td>');
  								echo('</tr>');
  							}
  							 ?>
