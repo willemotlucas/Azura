@@ -4,6 +4,7 @@ class Request {
 
 	public $url; //URL called by the user
 	public $page = 1;
+	public $prefix = false;
 
 	function __construct()
 	{

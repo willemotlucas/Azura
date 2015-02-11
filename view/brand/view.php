@@ -82,7 +82,7 @@ if(!empty($products))
 			<!-- End of a col div -->
 
 		<?php
-			if($i%3==0 && $i != 0)
+			if($i%3 == 0 && $i != 0)
 			{
 				echo('</div>');
 				$j++;

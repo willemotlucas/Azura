@@ -48,12 +48,19 @@ class PageController extends Controller
 		$this->render('service');
 	}
 
-	function admin()
+	function admin_index()
+	{
+		$this->layout->setLayout('admin');
+		
+		$this->render('admin_index');
+	}
+
+	function admin_login()
 	{
 		$this->layout->addCssFile('css', array(
 			'login' => '<link href="' .BASE_URL. '/webroot/css/page/login.css" rel="stylesheet">'));
 		
-		$this->render('login');
+		$this->render('admin_login');
 	}
 }
 ?>

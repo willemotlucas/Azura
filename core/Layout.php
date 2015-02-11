@@ -11,7 +11,12 @@ class Layout {
 		$this->layout = $layout;
 	}
 
-	function loadView($view, $vars)
+	public function setLayout($layout)
+	{
+		$this->layout = $layout;
+	} 
+
+	public function loadView($view, $vars)
 	{
 		//extract all parameters for using it in the view
 		extract($vars);

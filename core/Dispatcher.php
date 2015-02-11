@@ -8,18 +8,23 @@ class Dispatcher {
 		$this->request = new Request();
 		Router::parse($this->request->url, $this->request);
 		$controller = $this->loadController();
+		$action = $this->request->action;
+		if($this->request->prefix)
+		{
+			$action = $this->request->prefix . '_' . $action;
+		}
 		
 		//404 Error if unknown controller
-		if(!in_array($this->request->action, array_diff(get_class_methods($controller), get_class_methods('Controller'))))
+		if(!in_array($action, array_diff(get_class_methods($controller), get_class_methods('Controller'))))
 		{
 			$this->error('Le controller ne dispose pas de cette action');
 		}
 
 		//call the controller with specified action in the URL and optional parameters
-		call_user_func_array(array($controller, $this->request->action), $this->request->params);
+		call_user_func_array(array($controller, $action), $this->request->params);
 		
 		//load the view of controller action
-		$controller->render($this->request->action);
+		$controller->render($action);
 	}
 
 	function error($message)
