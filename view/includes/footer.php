@@ -14,7 +14,7 @@
                         <p class="align-center"><strong>AZURA à BLOIS, 12 Rue Emile Laurens - 02.54.78.72.63</strong></p>
                     </div>
                     <div class="col-lg-4 col-sm-4 col-xs-4">
-                        <p class="align-right">Copyright &copy AZURA - <a href="#">Mentions légales</a></p>
+                        <p class="align-right">Copyright <a href="/Azura/safehouse/page/index" style="color:#000000;">&copy</a> AZURA - <a href="#">Mentions légales</a></p>
                     </div>
                 </div>
             </div>
