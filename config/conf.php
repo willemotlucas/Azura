@@ -15,4 +15,6 @@ class Conf
 
 }
 
+Router::prefix('safehouse', 'admin');
+
 ?>

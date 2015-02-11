@@ -38,5 +38,17 @@ class BrandController extends Controller
 		//load the view and display it for the user
 		$this->render('view');
 	}
+
+	function admin_list()
+	{
+		$this->layout->setLayout('admin');
+		$this->loadModel('Brand');
+		$brands = $this->Brand->find();
+
+		$this->set('brands', $brands);
+
+		//load the view and display it for the user
+		$this->render('admin_list');
+	}
 }
 ?>

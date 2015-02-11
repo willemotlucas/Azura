@@ -4,18 +4,28 @@ class PageController extends Controller
 {
 	function index()
 	{
+		$this->loadModel('Achievement');
+		$achievement = $this->Achievement->findLast();
+
+		$this->loadModel('Brand');
+		$brands = $this->Brand->findBrandWithLogo();
+		$nbBrands = count($brands);
+		$nbLines = ceil($nbBrands/4);
+		$nbBrandsLastLine = $nbBrands%4;
+		$nbBrandsLastLine == 0 ? $nbBrandsLastLine = 4 : $nbBrandsLastLine = $nbBrandsLastLine;
+		
+		$this->set('brands', $brands);
+		$this->set('nbLines', $nbLines);
+		$this->set('nbBrandsLastLine', $nbBrandsLastLine);
+		$this->set('achievement', $achievement);
 		// set the css and js files for the specific view
+		
 		$this->layout->addCssFile('css', array(
 			'index' => '<link href="' .BASE_URL. '/webroot/css/page/index.css" rel="stylesheet">'
 		));
 		$this->layout->addJsFile('js', array(
 			'index' => '<script src="' .BASE_URL. '/webroot/js/page/page.js"></script>'
 		));
-
-		$this->loadModel('Achievement');
-		$achievement = $this->Achievement->findLast();
-
-		$this->set('achievement', $achievement);
 
 		//load the view and display it for the user
 		$this->render('index');
@@ -38,12 +48,19 @@ class PageController extends Controller
 		$this->render('service');
 	}
 
-	function admin()
+	function admin_index()
+	{
+		$this->layout->setLayout('admin');
+		
+		$this->render('admin_index');
+	}
+
+	function admin_login()
 	{
 		$this->layout->addCssFile('css', array(
 			'login' => '<link href="' .BASE_URL. '/webroot/css/page/login.css" rel="stylesheet">'));
 		
-		$this->render('login');
+		$this->render('admin_login');
 	}
 }
 ?>

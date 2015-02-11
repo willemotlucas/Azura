@@ -32,10 +32,12 @@ if(!empty($products))
 		{
 			if($i%3 == 0)
 			{
+				//Create a new row div for a 4-line products
 				echo('<div class="row">' . "\r\n");
 			}
 			if($j != $nbLines)
 			{
+				//We are not on the last line, so it's a standard display
 				echo('<div class="col-lg-3">' . "\r\n");
 			}
 			else
@@ -80,7 +82,7 @@ if(!empty($products))
 			<!-- End of a col div -->
 
 		<?php
-			if($i%3==0 && $i != 0)
+			if($i%3 == 0 && $i != 0)
 			{
 				echo('</div>');
 				$j++;
