@@ -33,7 +33,7 @@
                     <a href="#"><i class="fa fa-gavel fa-fw"></i> Réalisations<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Voir toutes les réalisations</a>
+                            <a href="/Azura/safehouse/achievement/list">Voir toutes les réalisations</a>
                         </li>
                         <li>
                             <a href="#">Ajouter une réalisations</a>
