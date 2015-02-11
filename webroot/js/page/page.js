@@ -55,7 +55,7 @@ function setTextLearnMore(text) {
 }
 
 $(document).ready(function() {
-    //equalHeight($(".thumbnail"));
+    equalHeight($(".thumbnail"));
     changeModalDialog();
     
     $(window).resize(function(){

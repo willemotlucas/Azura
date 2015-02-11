@@ -32,6 +32,7 @@ if(!empty($products))
 		{
 			if($i%3 == 0)
 			{
+				//Create a new row div for a 4-line products
 				echo('<div class="row">' . "\r\n");
 			}
 			if($j != $nbLines)

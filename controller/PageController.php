@@ -4,18 +4,28 @@ class PageController extends Controller
 {
 	function index()
 	{
+		$this->loadModel('Achievement');
+		$achievement = $this->Achievement->findLast();
+
+		$this->loadModel('Brand');
+		$brands = $this->Brand->findBrandWithLogo();
+		$nbBrands = count($brands);
+		$nbLines = ceil($nbBrands/4);
+		$nbBrandsLastLine = $nbBrands%4;
+		
+		$this->set('brands', $brands);
+		$this->set('nbBrands', $nbBrands);
+		$this->set('nbLines', $nbLines);
+		$this->set('nbBrandsLastLine', $nbBrandsLastLine);
+		$this->set('achievement', $achievement);
 		// set the css and js files for the specific view
+		
 		$this->layout->addCssFile('css', array(
 			'index' => '<link href="' .BASE_URL. '/webroot/css/page/index.css" rel="stylesheet">'
 		));
 		$this->layout->addJsFile('js', array(
 			'index' => '<script src="' .BASE_URL. '/webroot/js/page/page.js"></script>'
 		));
-
-		$this->loadModel('Achievement');
-		$achievement = $this->Achievement->findLast();
-
-		$this->set('achievement', $achievement);
 
 		//load the view and display it for the user
 		$this->render('index');
