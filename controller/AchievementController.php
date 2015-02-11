@@ -10,10 +10,15 @@ class AchievementController extends Controller
 		
 		$params['achievements'] = $this->Achievement->find(
 			array(
-				'limit' => ($perPage * ($this->request->page-1)) . ',' . $perPage
+				'limit' => ($perPage * ($this->request->page-1)) . ',' . $perPage,
+				'conditions' => 'online=1'
 			)
 		);
-		$params['total'] = $this->Achievement->findCount();
+		$params['total'] = $this->Achievement->findCount(
+			array(
+				'online' => '1'
+			)
+		);
 
 		if($this->request->page > $params['total'])
 		{

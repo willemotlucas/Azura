@@ -96,7 +96,7 @@ class Model
 				{
 					if(!is_numeric($v))
 					{
-						$v = '"' . mysql_escape_string($v) . '"';
+						$v = '"' . mysql_real_escape_string($v) . '"';
 					}
 					$cond[] = "$k=$v";
 				}
@@ -108,7 +108,7 @@ class Model
 
 		if(isset($req['limit']))
 		{
-			$sql .= 'LIMIT ' . $req['limit'];			
+			$sql .= ' LIMIT ' . $req['limit'];			
 		}
 
 		if(isset($req['order']))

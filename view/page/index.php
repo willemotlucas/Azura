@@ -23,6 +23,7 @@
         </div>
         <div class="row">
             <div id="thumbnail-container">
+            <div class="col-lg-10 col-lg-offset-1">
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
                         <img class="img-responsive" src="/Azura/webroot/img/home/farrow-and-ball.png" alt="Farrow & ball">
@@ -85,16 +86,18 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div id="thumbnail-container">
+            <div class="col-lg-10 col-lg-offset-1">
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
                         <img class="img-responsive" src="/Azura/webroot/img/home/sandberg-coleson-osborne.png" alt="">
                         <div class="caption">
-                            <h3>Osborne & Little | Thibault <br> Cole & Son | Sandberg<br>
-                                <small class="text-black">Peintures et papiers peints</small> <br>
+                            <h3>Osborne & Little<br>
+                                <small class="text-black">Papiers peints</small> <br>
                             </h3>
                             <h4><a href="#">Découvrir la gamme</a></h4>
                             <a href="" class="learn-more"></a>
@@ -104,6 +107,57 @@
                             </p> -->
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="/Azura/webroot/img/home/sandberg-coleson-osborne.png" alt="">
+                        <div class="caption">
+                            <h3>Thibault<br>
+                                <small class="text-black">Papiers peints</small> <br>
+                            </h3>
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <a href="" class="learn-more"></a>
+<!--                             <p class="text-black">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus beatae cumque cupiditate eveniet exercitationem labore modi nam, nesciunt optio pariatur repellat soluta totam? Atque et labore necessitatibus praesentium veritatis?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet commodi debitis dolorum eos eveniet facere harum hic ipsa magni, molestias nam rem repellat soluta sunt, voluptate! Explicabo, soluta!<br>
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="/Azura/webroot/img/home/sandberg-coleson-osborne.png" alt="">
+                        <div class="caption">
+                            <h3>Cole & Son<br>
+                                <small class="text-black">Papiers peints</small> <br>
+                            </h3>
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <a href="" class="learn-more"></a>
+<!--                             <p class="text-black">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus beatae cumque cupiditate eveniet exercitationem labore modi nam, nesciunt optio pariatur repellat soluta totam? Atque et labore necessitatibus praesentium veritatis?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet commodi debitis dolorum eos eveniet facere harum hic ipsa magni, molestias nam rem repellat soluta sunt, voluptate! Explicabo, soluta!<br>
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="/Azura/webroot/img/home/sandberg-coleson-osborne.png" alt="">
+                        <div class="caption">
+                            <h3>Sandberg<br>
+                                <small class="text-black">Papiers peints</small> <br>
+                            </h3>
+                            <h4><a href="#">Découvrir la gamme</a></h4>
+                            <a href="" class="learn-more"></a>
+<!--                             <p class="text-black">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus beatae cumque cupiditate eveniet exercitationem labore modi nam, nesciunt optio pariatur repellat soluta totam? Atque et labore necessitatibus praesentium veritatis?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet commodi debitis dolorum eos eveniet facere harum hic ipsa magni, molestias nam rem repellat soluta sunt, voluptate! Explicabo, soluta!<br>
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="thumbnail">
@@ -270,4 +324,5 @@
     }
     ?>
 </div>
-<!-- /.container
+<!-- /.container -->
+
