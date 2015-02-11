@@ -21,7 +21,7 @@
                     <a href="#"><i class="fa fa-paint-brush fa-fw"></i> Marques<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Voir toutes les marques</a>
+                            <a href="/Azura/cockpit/brand/list">Voir toutes les marques</a>
                         </li>
                         <li>
                             <a href="#">Ajouter une marque</a>
