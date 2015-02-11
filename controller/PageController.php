@@ -12,6 +12,7 @@ class PageController extends Controller
 		$nbBrands = count($brands);
 		$nbLines = ceil($nbBrands/4);
 		$nbBrandsLastLine = $nbBrands%4;
+		$nbBrandsLastLine == 0 ? $nbBrandsLastLine = 4 : $nbBrandsLastLine = $nbBrandsLastLine;
 		
 		$this->set('brands', $brands);
 		$this->set('nbLines', $nbLines);

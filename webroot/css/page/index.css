@@ -83,10 +83,9 @@
     bottom: -5px;
 }
 
-#brands .learn-more {
-    color: #000000;
+#brands {
+    padding-bottom: 2%;
 }
-
 /*
  * 
  * LAST ACHIEVEMENT SECTION

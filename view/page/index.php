@@ -31,7 +31,7 @@
         $firstCol = true;
         foreach ($brands as $brand)
         {
-            if($i%3 === 0)
+            if($i%4 === 0)
             {
                 echo('<div class="row">
                         <div id="thumbnail-container">
@@ -53,46 +53,50 @@
                 {
                     if($firstCol)
                     {
-                        echo('<div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-6">');
+                        echo('<div class="col-lg-3 col-lg-offset-3 col-md-6 col-sm-6">');
                         $firstCol = false;
                     }
                     else
-                        echo('<div class="col-lg-4 col-md-6 col-sm-6">');
+                        echo('<div class="col-lg-3 col-md-6 col-sm-6">');
                 }
                 elseif($nbBrandsLastLine == 3)
                 {
                     echo('<div class="col-lg-4 col-md-6 col-sm-6">');
                 }
                 elseif($nbBrandsLastLine == 4)
+                {
                     echo('<div class="col-lg-3 col-md-6 col-sm-6">');
+                }
             }
     ?>
 
                         <div class="thumbnail">
-                            <img class="img-responsive" src=<?php echo('"' . $brand->src . '"'); ?> alt="Farrow & ball">
+                            <img class="img-responsive" src=<?php echo('"' . $brand->src . '"'); ?> alt=<?php echo('"' . $brand->alt . '"'); ?>>
                             <div class="caption">
                                 <h3><?php echo($brand->name); ?><br>
                                     <small class="text-black"><?php echo($brand->products_type); ?></small> <br><br>
                                 </h3>
                                 <h4><a href=<?php echo('"/Azura/brand/view/' . $brand->id . '"'); ?>>Découvrir la gamme</a></h4>
-                                <a href="" class="learn-more"></a>
                             </div>
                         </div>
                     </div> 
                     <!-- End of a col thumbnail div -->
     <?php 
         //End of a row, we close div
-        if($i%3 == 0 && $i != 0)
+        if($i%4 == 3 && $i != 0 && $i != 1)
         {
             echo('      </div>
                     </div>
-                </div>'
+                </div>' ."\r\n"
             );
             $j++;
         }
         $i++;
         }
-    echo('</section>');
+    echo('          </div>
+                </div>
+            </div>
+        </section>');
     }
      ?>
 
