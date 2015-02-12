@@ -95,23 +95,44 @@ class AchievementController extends Controller
 		}
 	}
 
-	function admin_edit($id)
+	function admin_edit($id = null)
 	{
-		$this->layout->setLayout('admin');
 		$this->loadModel('Achievement');
-		$achievement = $this->Achievement->findFirst(array(
-			'conditions' => 'id=' . $id
-			)
-		);
+		$this->layout->setLayout('admin');
+		
+		//If data are sended by post action, the request object catch them
+		if($this->request->data)
+		{
+			$this->request->data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+			if($this->Achievement->save($this->request->data))
+			{
+				$msg = 'La réalisation a bien été mise à jour.';
+				$this->layout->Session->setFlash($msg);
 
-		$this->set('achievement', $achievement);
+				$this->redirect('/Azura/safehouse/achievement/list');
+			}
+			else
+			{
+				$msg = 'Une erreur est survenue, la réaliastion n\'a pas été mise à jour. Veuilez réessayer ou contacter l\'administrateur.';
+				$this->layout->Session->setFlash($msg);
 
+				$this->redirect('/Azura/safehouse/achievement/list');
+			}
+		}
+		else
+		{
+			$achievement = $this->Achievement->findFirst(array(
+				'conditions' => 'id=' . $id
+				)
+			);
 
+			$this->set('achievement', $achievement);
 
-		$this->layout->addJsFile('js', array(
-			'validator' => '<script src="' . BASE_URL . '/webroot/js/vendor/validator.min.js"></script>'
-			));
-		$this->render('admin_edit');
+			$this->layout->addJsFile('js', array(
+				'validator' => '<script src="' . BASE_URL . '/webroot/js/vendor/validator.min.js"></script>'
+				));
+			$this->render('admin_edit');
+		}
 	}
 
 	function admin_delete($id)

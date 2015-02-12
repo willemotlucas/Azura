@@ -158,6 +158,33 @@ class Model
 		$sql = 'DELETE FROM ' . $this->table . ' WHERE ' . $this->primaryKey . '=' . $id;
 		$this->db->query($sql);
 	}
+
+	public function save($data)
+	{
+		$key = $this->primaryKey;
+		$fields = array();
+		$d = array();
+		foreach ($data as $k => $v) 
+		{
+			$fields[] = "$k=:$k";
+			$d[":$k"] = $v;
+		}
+
+		//If primary key is set, it's a update request
+		if(isset($data->$key) && !empty($data->$key))
+		{
+			$sql = 'UPDATE ' . $this->table . ' SET ' . implode(',' , $fields) . ' WHERE ' . $key . '=:' .$key;
+			try
+			{
+				$prepare = $this->db->prepare($sql);
+				$prepare->execute($d);
+			} catch(Exception $e) {
+				return false;
+			}
+
+			return true;
+		}
+	}
 }
 
 ?>
