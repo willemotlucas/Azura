@@ -135,7 +135,7 @@ class Model
 
 	public function findLast()
 	{
-		$sql = 'SELECT * FROM ' . $this->table . ' as ' . get_class($this) . ' ORDER BY id DESC LIMIT 1';
+		$sql = 'SELECT * FROM ' . $this->table . ' as ' . get_class($this) . ' WHERE online=1 ORDER BY id DESC LIMIT 1';
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 
@@ -151,6 +151,12 @@ class Model
 		);
 
 		return $res->count;
+	}
+
+	public function delete($id)
+	{
+		$sql = 'DELETE FROM ' . $this->table . ' WHERE ' . $this->primaryKey . '=' . $id;
+		$this->db->query($sql);
 	}
 }
 

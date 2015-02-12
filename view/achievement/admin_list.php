@@ -3,36 +3,19 @@
 		<div class="col-lg-12">
 			<h1 class="page-header">
                 Liste des réalisations
-                <small>Vous pouvez consulter, modifier ou supprimer une réalisation.</small>
+                <small>Vous pouvez modifier ou supprimer une réalisation.</small>
             </h1>
 		</div>
 	</div>
     <?php 
-    if(isset($msg))
+    if(isset($_SESSION['flash']))
     {
     ?>
-	<div class="row">
-	  <div class="col-lg-6">
-    <?php  
-        if(isset($msg['success']))
-        {
-    ?>
-			<div class="alert alert-success alert-dismissable"><button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-				<p><?php echo($msg['success']) ?></p>
-			</div>
-    <?php  
-        }
-        elseif(isset($msg['error']))
-        {
-    ?>
-            <div class="alert alert-success">
-                <p><?php echo($msg['error']) ?></p>
-            </div>
-    <?php       
-        }
-    ?>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-lg-6">
+            <?php echo($this->Session->flash()); ?>
+        </div>
+    </div>
     <?php
     }
     ?>
@@ -69,7 +52,8 @@
  								else
  									echo('<td> Non </td>');
  								echo('<td><a href="/Azura/safehouse/achievement/edit/' . $achievement->id . '"> Modifier </a></td>');
- 								echo('<td><a href="/Azura/safehouse/achievement/delete/' . $achievement->id . '"> Supprimer </a></td>');
+ 								echo('<td><a onclick="return confirm(\'Voulez-vous vraiment supprimer cette réalisation ?\');" 
+                                    href="/Azura/safehouse/achievement/delete/' . $achievement->id . '"> Supprimer </a></td>');
  								echo('</tr>');
  							}
  							 ?>

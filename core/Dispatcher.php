@@ -24,7 +24,7 @@ class Dispatcher {
 		call_user_func_array(array($controller, $action), $this->request->params);
 		
 		//load the view of controller action
-		$controller->render($action);
+		//$controller->render($action);
 	}
 
 	function error($message)
@@ -41,6 +41,8 @@ class Dispatcher {
 		{
 			require $file; //include the controller
 			$controller = new $name($this->request); //create an instance of this controller
+			// $controller->Session = new Session();
+
 			return $controller;
 		}
 		else

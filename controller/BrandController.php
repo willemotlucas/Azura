@@ -50,5 +50,16 @@ class BrandController extends Controller
 		//load the view and display it for the user
 		$this->render('admin_list');
 	}
+
+	function admin_delete($id)
+	{
+		$this->loadModel('Brand');
+		// $this->Brand->delete($id);
+		
+		$msg = 'La marque a bien été supprimée.';
+		$this->layout->Session->setFlash($msg);
+
+		$this->redirect('/Azura/safehouse/brand/list');
+	}
 }
 ?>

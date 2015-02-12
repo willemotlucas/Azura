@@ -71,13 +71,17 @@ class AchievementController extends Controller
 				$achievement->testimonial = htmlspecialchars($_POST['testimonial']);
 				$achievement->online = $_POST['online'] == 'yes' ? 1 : 0;*/
 
-				$msg = array('success' => 'Bravo ! Vous avez ajouté une nouvelle réalisation !');
-
-				$this->admin_list($msg);
+				$msg = 'Bravo ! Vous avez ajouté une nouvelle réalisation !';
+				$this->layout->Session->setFlash($msg);
+				
+				$this->redirect('/Azura/safehouse/achievement/list');
 			}
 			else
 			{
-				die('Erreur lors de la vérification');
+				$msg = 'Oups ! Une erreur est survenu lors de l\'enregistrement de la réalisation. Réessayer ou contacter l\'administrateur.';
+				$this->layout->Session->setFlash($msg, 'error');
+
+				$this->redirect('/Azura/safehouse/achievement/list');
 			}
 		}
 		//We have to display formular to add a new achievement
@@ -95,12 +99,12 @@ class AchievementController extends Controller
 	{
 		$this->layout->setLayout('admin');
 		$this->loadModel('Achievement');
-		$achievement = $this->Achievement->find(array(
+		$achievement = $this->Achievement->findFirst(array(
 			'conditions' => 'id=' . $id
 			)
 		);
 
-		$this->set('achievement', $achievement[0]);
+		$this->set('achievement', $achievement);
 
 
 
@@ -112,6 +116,12 @@ class AchievementController extends Controller
 
 	function admin_delete($id)
 	{
+		$this->loadModel('Achievement');
+		// $this->Achievement->delete($id);
+		$msg = 'La réalisation a bien été supprimée.';
+		$this->layout->Session->setFlash($msg);
+		
+		$this->redirect('/Azura/safehouse/achievement/list');
 	}
 
 }

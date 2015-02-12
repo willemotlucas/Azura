@@ -14,7 +14,7 @@
 			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/achievement/add">
 				<div class="form-group">
 					<label for="title" class="control-label">Titre* :</label>
-					<input id="title" name="title" type="text" class="form-control" maxlength="45" required/>
+					<input id="title" name="title" type="text" class="form-control" maxlength="45" />
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">

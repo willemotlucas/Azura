@@ -1,5 +1,5 @@
 <?php
-
+	require 'Session.php';
 	require 'functions.php';
 	require 'Router.php';
 
@@ -10,6 +10,5 @@
 	require 'Model.php';
 	require 'Controller.php';
 	require 'Layout.php';
-	require 'Session.php';
 
  ?>

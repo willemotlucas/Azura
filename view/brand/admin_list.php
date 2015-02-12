@@ -1,16 +1,24 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Liste des marques</h1>	
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="alert alert-info">
-				<p>Dans cet espace, vous pouvez consulter, modifier ou supprimer une marque.</p>
-			</div>
-		</div>
-	</div>
+			<h1 class="page-header">
+                Liste des marques
+                <small>Vous pouvez modifier ou supprimer une marque.</small>
+            </h1>   
+        </div>
+    </div>
+    <?php 
+    if(isset($_SESSION['flash']))
+    {
+    ?>
+    <div class="row">
+      <div class="col-lg-6">
+      <?php echo($this->Session->flash()); ?>
+        </div>
+    </div>
+    <?php
+    }
+    ?>
 	<div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -44,7 +52,8 @@
  								else
  									echo('<td> Non </td>');
  								echo('<td><a href="/Azura/safehouse/brand/edit/' . $brand->id . '"> Modifier </a></td>');
- 								echo('<td><a href="/Azura/safehouse/brand/delete/' . $brand->id . '"> Supprimer </a></td>');
+ 								echo('<td><a onclick="return confirm(\'Voulez-vous vraiment supprimer cette marque et tous les produits correspondants ?\')"
+                                href="/Azura/safehouse/brand/delete/' . $brand->id . '"> Supprimer </a></td>');
  								echo('</tr>');
  							}
  							 ?>

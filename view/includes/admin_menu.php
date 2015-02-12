@@ -36,7 +36,7 @@
                             <a href="/Azura/safehouse/achievement/list">Voir toutes les réalisations</a>
                         </li>
                         <li>
-                            <a href="/Azura/safehouse/achievement/add">Ajouter une réalisations</a>
+                            <a href="/Azura/safehouse/achievement/add">Ajouter une réalisation</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

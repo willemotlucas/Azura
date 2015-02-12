@@ -9,6 +9,7 @@ class Layout {
 	function __construct($layout)
 	{
 		$this->layout = $layout;
+		$this->Session = new Session();
 	}
 
 	public function setLayout($layout)
