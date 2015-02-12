@@ -44,13 +44,23 @@
 				<label class="control-label">Mettre le contenu en ligne* :</label>
 				    <div class="radio">
 				    	<label>
-				        	<input type="radio" name="online" value="yes" checked required>
+				    		<?php 
+				    		if($achievement->online == 1) 
+				    			echo('<input type="radio" name="online" value="yes" checked required>');
+				    		else
+				    			echo('<input type="radio" name="online" value="yes" required>')
+				    		?>
 				        	Oui
 				      	</label>
 				    </div>
 				    <div class="radio">
 				    	<label>
-				        	<input type="radio" name="online" value="no" required>
+				    		<?php 
+				    		if($achievement->online == 0) 
+				    			echo('<input type="radio" name="online" value="no" checked required>');
+				    		else
+				    			echo('<input type="radio" name="online" value="no" required>')
+				    		?>
 				        	Non
 				      	</label>
 				    </div>

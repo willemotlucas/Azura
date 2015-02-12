@@ -22,23 +22,23 @@ function debug($var)
 	}
 }
 
-function verifyField($post, $field, $rules)
+function verifyField($data, $field, $rules)
 {
 	if(isset($rules['empty']) && $rules['empty'] == 'no')
 	{
-		if(empty($post[$field]))
+		if(empty($data->$field))
 			return false;
 	}
 
 	if(isset($rules['maxLength']))
 	{
-		if(strlen($post[$field]) > $rules['maxLength'])
+		if(strlen($data->$field) > $rules['maxLength'])
 			return false;
 	}
 
 	if(isset($rules['minLength']))
 	{
-		if(strlen($post[$field]) < $rules['minLength'])
+		if(strlen($data->$field) < $rules['minLength'])
 			return false;
 	}
 

@@ -164,6 +164,7 @@ class Model
 		$key = $this->primaryKey;
 		$fields = array();
 		$d = array();
+
 		foreach ($data as $k => $v) 
 		{
 			$fields[] = "$k=:$k";
@@ -174,16 +175,24 @@ class Model
 		if(isset($data->$key) && !empty($data->$key))
 		{
 			$sql = 'UPDATE ' . $this->table . ' SET ' . implode(',' , $fields) . ' WHERE ' . $key . '=:' .$key;
-			try
-			{
-				$prepare = $this->db->prepare($sql);
-				$prepare->execute($d);
-			} catch(Exception $e) {
-				return false;
-			}
-
-			return true;
 		}
+		else
+		{
+			if(isset($data->$key))
+			{
+				unset($data->$key);
+			}
+			$sql = 'INSERT INTO ' . $this->table . ' SET ' . implode(',' , $fields);
+		}
+		try
+		{
+			$prepare = $this->db->prepare($sql);
+			$prepare->execute($d);
+		} catch(Exception $e) {
+			return false;
+		}
+		
+		return true;
 	}
 }
 

@@ -14,7 +14,7 @@
 			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/achievement/add">
 				<div class="form-group">
 					<label for="title" class="control-label">Titre* :</label>
-					<input id="title" name="title" type="text" class="form-control" maxlength="45" />
+					<input id="title" name="title" type="text" class="form-control" maxlength="45" required/>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
@@ -26,7 +26,7 @@
 					<div class="alert alert-info">
 						<p><i class="fa fa-info-circle"></i> La description apparaît sur la page "Nos réalisations".</p>
 					</div>
-					<textarea id="description" class="form-control" rows="7"></textarea>
+					<textarea id="description" name="description" class="form-control" rows="7"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="testimonial" class="control-label">Témoignage :</label>
@@ -53,7 +53,7 @@
 				<p>* Ces champs sont obligatoires</p>
 				<div class="form-group">
 					<div class="col-lg-4 col-lg-offset-9">
-						<button class="btn btn-success" type="submit" name="submit">Enregistrer</button>
+						<button class="btn btn-success" type="submit">Enregistrer</button>
 						<button class="btn btn-primary" type="button">Annuler</button>
 					</div>
 				</div>

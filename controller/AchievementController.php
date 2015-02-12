@@ -56,33 +56,34 @@ class AchievementController extends Controller
 
 	function admin_add()
 	{
+		$this->loadModel('Achievement');
 		$this->layout->setLayout('admin');
 
 		//We receive the formular to save a new achievement into the database
-		if(isset($_POST['submit']))
+		if($this->request->data)
 		{
-			if(verifyField($_POST, 'title', array('empty' => 'no', 'maxLength' => 45)) && 
-				verifyField($_POST, 'subtitle', array('maxLength' => 45)))
-			{
+			$data = $this->request->data;
+			$data->title = htmlspecialchars($data->title);
+			$data->subtitle = htmlspecialchars($data->subtitle);
+			$data->description = htmlspecialchars($data->description);
+			$data->testimonial = htmlspecialchars($data->testimonial);
+			$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
 			
-/*				$achievement->title = htmlspecialchars($_POST['title']);
-				$achievement->subtitle = htmlspecialchars($_POST['subtitle']);
-				$achievement->description = htmlspecialchars($_POST['description']);
-				$achievement->testimonial = htmlspecialchars($_POST['testimonial']);
-				$achievement->online = $_POST['online'] == 'yes' ? 1 : 0;*/
-
-				$msg = 'Bravo ! Vous avez ajouté une nouvelle réalisation !';
-				$this->layout->Session->setFlash($msg);
-				
-				$this->redirect('/Azura/safehouse/achievement/list');
-			}
-			else
+			if(verifyField($data, 'title', array('empty' => 'no', 'maxLength' => 45)) && 
+				verifyField($data, 'subtitle', array('maxLength' => 45)))
 			{
-				$msg = 'Oups ! Une erreur est survenu lors de l\'enregistrement de la réalisation. Réessayer ou contacter l\'administrateur.';
-				$this->layout->Session->setFlash($msg, 'error');
-
-				$this->redirect('/Azura/safehouse/achievement/list');
+				if($this->Achievement->save($data))
+				{
+					$msg = 'Bravo ! Vous avez ajouté une nouvelle réalisation !';
+					$this->layout->Session->setFlash($msg);
+					$this->redirect('/Azura/safehouse/achievement/list');
+				}
 			}
+
+			$msg = 'Ouups ! Une erreur est survenu lors de l\'enregistrement de la réalisation. Veuillez réessayer ou contacter l\'administrateur.';
+			$this->layout->Session->setFlash($msg, 'error');
+
+			$this->redirect('/Azura/safehouse/achievement/list');
 		}
 		//We have to display formular to add a new achievement
 		else
@@ -103,18 +104,28 @@ class AchievementController extends Controller
 		//If data are sended by post action, the request object catch them
 		if($this->request->data)
 		{
-			$this->request->data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
-			if($this->Achievement->save($this->request->data))
+			$data = $this->request->data;
+			$data->title = htmlspecialchars($data->title);
+			$data->subtitle = htmlspecialchars($data->subtitle);
+			$data->description = htmlspecialchars($data->description);
+			$data->testimonial = htmlspecialchars($data->testimonial);
+			$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+			if(verifyField($data, 'title', array('empty' => 'no', 'maxLength' => 45)) &&
+			 verifyField($data, 'subtitle', array('maxLength' => 45)))
 			{
-				$msg = 'La réalisation a bien été mise à jour.';
-				$this->layout->Session->setFlash($msg);
 
-				$this->redirect('/Azura/safehouse/achievement/list');
+				if($this->Achievement->save($data))
+				{
+					$msg = 'La réalisation a bien été mise à jour.';
+					$this->layout->Session->setFlash($msg);
+
+					$this->redirect('/Azura/safehouse/achievement/list');
+				}
 			}
 			else
 			{
-				$msg = 'Une erreur est survenue, la réaliastion n\'a pas été mise à jour. Veuilez réessayer ou contacter l\'administrateur.';
-				$this->layout->Session->setFlash($msg);
+				$msg = 'Une erreur est survenue, la réalisation n\'a pas été mise à jour. Veuilez réessayer ou contacter l\'administrateur.';
+				$this->layout->Session->setFlash($msg, 'danger');
 
 				$this->redirect('/Azura/safehouse/achievement/list');
 			}
@@ -138,7 +149,7 @@ class AchievementController extends Controller
 	function admin_delete($id)
 	{
 		$this->loadModel('Achievement');
-		// $this->Achievement->delete($id);
+		$this->Achievement->delete($id);
 		$msg = 'La réalisation a bien été supprimée.';
 		$this->layout->Session->setFlash($msg);
 		
