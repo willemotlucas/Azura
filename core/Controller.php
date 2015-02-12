@@ -28,7 +28,7 @@ class Controller {
 		//if it's a 404 error, we load the path of a 404 error view
 		if(strpos($view, '/') === 0)
 		{
-			$view = ROOT.DS.'view'.DS.'errors'.DS.'404.php';
+			$view = ROOT.DS.'view'.DS.'errors'.DS.explode('/',$view)[2].'.php';
 		}
 
 		//otherwise we build the path of the view
@@ -78,6 +78,18 @@ class Controller {
 				'view' => '<link href="' .BASE_URL. '/webroot/css/errors/404.css" rel="stylesheet">'
 				));
 		$this->render('/error/404');
+
+		die();
+	}
+
+	public function admin_e404($message=null)
+	{
+		header("HTTP/1.0 404 Not Found");
+		$this->set('message', $message);
+/*		$this->layout->addCssFile('css', array(
+				'view' => '<link href="' .BASE_URL. '/webroot/css/errors/404.css" rel="stylesheet">'
+				));*/
+		$this->render('/error/admin_404');
 
 		die();
 	}

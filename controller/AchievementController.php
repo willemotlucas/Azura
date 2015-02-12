@@ -13,7 +13,7 @@ class AchievementController extends Controller
 				'limit' => ($perPage * ($this->request->page-1)) . ',' . $perPage,
 				'conditions' => 'online=1',
 				'order' => 'id',
-				'way' => 'DESC',
+				'way' => 'DESC'
 			)
 		);
 		$params['total'] = $this->Achievement->findCount(
@@ -138,6 +138,11 @@ class AchievementController extends Controller
 				'conditions' => 'id=' . $id
 				)
 			);
+
+			if(empty($achievement))
+			{
+				$this->admin_e404();
+			}
 
 			$this->set('achievement', $achievement);
 

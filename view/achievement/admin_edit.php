@@ -1,6 +1,6 @@
 <div id="page-wrapper">
 	<?php 
-	if(isset($achievement))
+	if(!empty($achievement))
 	{
 	?>
 	<div class="row">
