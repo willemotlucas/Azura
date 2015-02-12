@@ -106,11 +106,6 @@ class Model
 			$req['conditions'];
 		}
 
-		if(isset($req['limit']))
-		{
-			$sql .= ' LIMIT ' . $req['limit'];			
-		}
-
 		if(isset($req['order']))
 		{
 			$sql .= ' ORDER BY ' . $req['order'];
@@ -121,6 +116,10 @@ class Model
 			}
 		}
 
+		if(isset($req['limit']))
+		{
+			$sql .= ' LIMIT ' . $req['limit'];			
+		}
 
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
