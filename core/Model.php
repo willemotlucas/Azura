@@ -114,7 +114,13 @@ class Model
 		if(isset($req['order']))
 		{
 			$sql .= ' ORDER BY ' . $req['order'];
+		
+			if(isset($req['way']))
+			{
+				$sql .= ' ' . $req['way'];
+			}
 		}
+
 
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();

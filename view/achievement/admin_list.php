@@ -1,16 +1,41 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Liste des réalisations</h1>	
+			<h1 class="page-header">
+                Liste des réalisations
+                <small>Vous pouvez consulter, modifier ou supprimer une réalisation.</small>
+            </h1>
 		</div>
 	</div>
+    <?php 
+    if(isset($msg))
+    {
+    ?>
 	<div class="row">
-		<div class="col-lg-6">
-			<div class="alert alert-info">
-				<p>Dans cet espace, vous pouvez consulter, modifier ou supprimer une réalisations.</p>
+	  <div class="col-lg-6">
+    <?php  
+        if(isset($msg['success']))
+        {
+    ?>
+			<div class="alert alert-success alert-dismissable"><button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+				<p><?php echo($msg['success']) ?></p>
 			</div>
+    <?php  
+        }
+        elseif(isset($msg['error']))
+        {
+    ?>
+            <div class="alert alert-success">
+                <p><?php echo($msg['error']) ?></p>
+            </div>
+    <?php       
+        }
+    ?>
 		</div>
 	</div>
+    <?php
+    }
+    ?>
 	<div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">

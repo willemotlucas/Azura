@@ -22,4 +22,27 @@ function debug($var)
 	}
 }
 
+function verifyField($post, $field, $rules)
+{
+	if(isset($rules['empty']) && $rules['empty'] == 'no')
+	{
+		if(empty($post[$field]))
+			return false;
+	}
+
+	if(isset($rules['maxLength']))
+	{
+		if(strlen($post[$field]) > $rules['maxLength'])
+			return false;
+	}
+
+	if(isset($rules['minLength']))
+	{
+		if(strlen($post[$field]) < $rules['minLength'])
+			return false;
+	}
+
+	return true;
+}
+
 ?>

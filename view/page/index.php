@@ -127,9 +127,22 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white"><?php echo($achievement->title) ?></h2>
-                        <blockquote>
-                            <p class="text-justify">" <?php echo($achievement->testimonial) ?> " <a href=<?php echo '"' . BASE_URL . '/achievement/view"'?>> Voir nos autres travaux</a></p>
-                        </blockquote>
+                        <?php 
+                            if(!empty($achievement->testimonial))
+                            { 
+                        ?>
+                                <blockquote>
+                                    <p class="text-justify">" <?php echo($achievement->testimonial) ?> " <a href=<?php echo '"' . BASE_URL . '/achievement/view"'?>> Voir nos autres travaux</a></p>
+                                </blockquote>
+                        <?php 
+                            }
+                            else if(!empty($achievement->description))
+                            {
+                         ?>
+                                <p class="test-justify"><?php echo($achievement->description)?> <a href=<?php echo '"' . BASE_URL . '/achievement/view"'?>> Voir nos autres travaux</a></p>
+                        <?php 
+                            }
+                         ?>
                         <h3 class="text-white align-center">Vous aussi, faites appel à Azura pour votre décoration ou recevoir de simples conseils. Découvrez <a href="#">les services</a> que nous vous offrons, et <a href=<?php echo '"' . BASE_URL . '/page/contact"'?>>contactez-nous</a> !</h3>
                     </div>
                 </div>
