@@ -1,6 +1,6 @@
 <?php 
 
-class Achievement extends Model
+class Product_Image extends Model
 {
 
 	//If necessary, we can redefine the attribute 'table' which correspond to the database table
@@ -10,9 +10,9 @@ class Achievement extends Model
 		parent::__construct();
 	}
 
-	public function findAchievementWithImages()
+	public function findProductImage($image_id)
 	{
-		$sql = 'SELECT A.id, A.title, A.subtitle, A.testimonial, A.description, A.online, I.src, I.alt FROM Achievements A, Images I, Achievement_Images AI WHERE A.id = AI.Achievements_id AND I.id = AI.Images_id';
+		$sql = 'SELECT Images.src, Images.alt FROM Images, Product_Images WHERE Images.id = ' . $image_id;
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

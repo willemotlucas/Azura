@@ -39,11 +39,21 @@
 
 		        	<!-- One row of pictures -->
 			        <article>
+			        <?php 
+			        	if(isset($achievement->images))
+			        	{	
+			        		foreach ($achievement->images as $image) {
+			        ?>
 			 			<div class="col-lg-3 col-md-4 col-sm-4">
-				            <img data-toggle="modal" data-target="#modal1" class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+				            <img data-toggle="modal" data-target="" class="img-responsive img-hover" src=<?php echo('"' . $image->src . '"')?> alt="">
 				        </div>
+				    <?php
+			        		}
+			        	} 
+			        ?>
+				    </article>
 
-				       <div class="col-lg-3 col-md-4 col-sm-4">
+<!-- 				       <div class="col-lg-3 col-md-4 col-sm-4">
 				            <a href="#">
 				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
 				            </a>
@@ -57,11 +67,10 @@
 				        	<a href="#">
 				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
 				            </a>
-				        </div>
-				    </article>
+				        </div> -->
 
 					<!-- One row of pictures -->
-			        <article>
+<!-- 			        <article>
 			 			<div class="col-lg-3 col-md-4 col-sm-4">
 				            <img data-toggle="modal" data-target="#modal1" class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
 				        </div>
@@ -81,7 +90,7 @@
 				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
 				            </a>
 				        </div>
-				    </article>
+				    </article> -->
 				</div>
 			</div>
 			<?php

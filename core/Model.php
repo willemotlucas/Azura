@@ -62,11 +62,16 @@ class Model
 	{
 		$sql = 'SELECT ';
 
+		if(isset($req['distinct']))
+		{
+			$sql .= 'DISTINCT ';
+		}
+
 		if(isset($req['fields']))
 		{
 			if(is_array($req['fields']))
 			{
-				$sql .= implode(', ' , $$req['fields']);
+				$sql .= implode(', ' , $req['fields']);
 			}
 			else
 			{
@@ -78,7 +83,22 @@ class Model
 			$sql .= ' * ';
 		}
 
-		$sql .=  ' FROM ' . $this->table . ' as ' . get_class($this) . ' ';
+		if(isset($req['tables']))
+		{
+			if(is_array($req['tables']))
+			{
+				$sql .= ' FROM ' . implode(', ', $req['tables']) . ' as ' . get_class($this) . ' ';
+			}
+			else
+			{
+				$sql .= ' FROM ' . $req['tables'] . ' ';
+			}
+		}
+		else
+		{
+			$sql .=  ' FROM ' . $this->table . ' as ' . get_class($this) . ' ';		
+		}
+
 
 		//Construct the condition request
 		if(isset($req['conditions']))
@@ -104,6 +124,11 @@ class Model
 			}
 			
 			$req['conditions'];
+		}
+
+		if(isset($req['group']))
+		{
+			$sql .= ' GROUP BY ' . $req['group'];
 		}
 
 		if(isset($req['order']))

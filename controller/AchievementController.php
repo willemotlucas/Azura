@@ -12,10 +12,29 @@ class AchievementController extends Controller
 			array(
 				'limit' => ($perPage * ($this->request->page-1)) . ',' . $perPage,
 				'conditions' => 'online=1',
+				//'group' => 'id',
 				'order' => 'id',
 				'way' => 'DESC'
 			)
 		);
+
+		$this->loadModel('Achievement_Image');
+		$images = array();
+
+		foreach ($params['achievements'] as $achievement) 
+		{
+			$images = $this->Achievement_Image->find(
+				array(
+					'conditions' => 'Achievements_id = ' .  $achievement->id
+				)
+			);
+
+			if(!empty($images))
+			{
+				$achievement->images = $images;
+			}
+		}
+
 		$params['total'] = $this->Achievement->findCount(
 			array(
 				'online' => '1'
