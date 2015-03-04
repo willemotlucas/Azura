@@ -38,61 +38,50 @@
 	        	<div class="col-lg-8 col-md-8 col-sm-8">
 
 		        	<!-- One row of pictures -->
-			        <article>
 			        <?php 
 			        	if(isset($achievement->images))
 			        	{	
+			        		$i = 0;
+			        		$idModal = 1;
 			        		foreach ($achievement->images as $image) {
+			        			if($i == 0)
+			        				echo('<article>');
 			        ?>
-			 			<div class="col-lg-3 col-md-4 col-sm-4">
-				            <img data-toggle="modal" data-target="" class="img-responsive img-hover" src=<?php echo('"' . $image->src . '"')?> alt="">
-				        </div>
+		 			<div class="col-lg-3 col-md-4 col-sm-4">
+			            <img data-toggle="modal" data-target=<?php echo('"#modal'.$idModal.'"');?> class="img-responsive img-hover" src=<?php echo('"' . $image->src . '"')?> alt="">
+			        </div>
+			        <div id=<?php echo('"modal'.$idModal.'"');?> class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            			<div class="modal-dialog">
+                			<div class="modal-content">
+                    			<div class="modal-header">
+                        			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    			</div>
+                    			<div class="modal-body">
+                        			<img class="img-responsive img-hover" src=<?php echo('"' . $image->src . '"')?> alt="">
+                    			</div>
+                    			<div class="modal-footer">
+                        			<button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                    			</div>
+                    		</div>
+                    	</div>
+                	</div>
 				    <?php
+			        		$i++;
+			        		$idModal++;
+			        			if($i == 4)
+			        			{
+			        				echo('</article>');
+			        				$i = 0;
+			        			}
 			        		}
+
+			        		if($i != 0)
+			        			echo('</article>');
 			        	} 
 			        ?>
-				    </article>
-
-<!-- 				       <div class="col-lg-3 col-md-4 col-sm-4">
-				            <a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div>
-				        <div class="col-lg-3 col-md-4 col-sm-4">
-				            <a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div>
-				        <div class="col-lg-3 col-md-4 col-sm-4">
-				        	<a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div> -->
-
-					<!-- One row of pictures -->
-<!-- 			        <article>
-			 			<div class="col-lg-3 col-md-4 col-sm-4">
-				            <img data-toggle="modal" data-target="#modal1" class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				        </div>
-
-				       <div class="col-lg-3 col-md-4 col-sm-4">
-				            <a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div>
-				        <div class="col-lg-3 col-md-4 col-sm-4">
-				            <a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div>
-				        <div class="col-lg-3 col-md-4 col-sm-4">
-				        	<a href="#">
-				                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-				            </a>
-				        </div>
-				    </article> -->
-				</div>
+			    </div>
 			</div>
+
 			<?php
 				$i++;
 	       	}
