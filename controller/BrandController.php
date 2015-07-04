@@ -16,10 +16,6 @@ class BrandController extends Controller
 		}
 
 		$this->loadModel('Product');
-/*		$req = array(
-				'conditions' => 'Brands_id=' . $id,
-				'order' => 'num_order'
-				);*/
 		$products = $this->Product->find();
 		$nbProducts = $this->Product->findCount();
 		$nbLines = ceil($nbProducts/4);
