@@ -25,8 +25,6 @@ class BrandController extends Controller
 		$nbLines = ceil($nbProducts/4);
 		$nbProductsLastLine = $nbProducts%4;
 
-		debug($products);
-
 		$this->set('brand', $brand[0]);
 		$this->set('products', $products);
 		$this->set('nbProductsLastLine', $nbProductsLastLine);
@@ -57,7 +55,7 @@ class BrandController extends Controller
 	function admin_delete($id)
 	{
 		$this->loadModel('Brand');
-		// $this->Brand->delete($id);
+		$this->Brand->delete($id);
 		
 		$msg = 'La marque a bien été supprimée.';
 		$this->layout->Session->setFlash($msg);
@@ -72,30 +70,78 @@ class BrandController extends Controller
 
 		if($this->request->data)
 		{
-			$data = $this->request->data;
-			$data->name = htmlspecialchars($data->name);
-			$data->description = htmlspecialchars($data->description);
-			$data->url = htmlspecialchars($data->url);
-			$data->products_type = htmlspecialchars($data->products_type);
-			$data->Logo_id = htmlspecialchars($data->Logo_id);
-			$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+			//Authorized extension, size max
+			$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
+			$max_size = 20000;
+			$width_max = 300;
+			$height_max = 150;
+			$msg = "";
 
-			//Add fields verifying + adding in database and throwing errors
-			if(verifyField($data, 'name', array('empty' => 'no', 'maxLength' => 45))
-			&& verifyField($data, 'description', array('empty' => 'no')))
+			//Save the logo into the server and add logo's url into database
+			$target_dir = ROOT . DS . 'webroot' . DS . 'img' . DS . 'brands'. DS;
+			$target_file = $target_dir . basename($_FILES['logo']['name']);
+			$src = '/Azura/webroot/img/brands/' . basename($_FILES['logo']['name']);
+			$upload_ok = 1;
+			$img_type = pathinfo($target_file, PATHINFO_EXTENSION);
+			if(!file_exists($target_file))
 			{
-				if($this->Achievement->save($data))
+				if(in_array(strtolower($img_type),$ext))
 				{
-					$msg = 'Bravo ! Vous avez ajouté une nouvelle marque !';
-					$this->layout->Session->setFlash($msg);
-					$this->redirect('/Azura/safehouse/brand/list');
+					$check = getimagesize($_FILES['logo']['tmp_name']);
+					if($check[2] >= 1 && $check[2] <= 14)
+					{
+						if($check[0] <= $width_max && $check[1] <= $height_max && filesize($_FILES['logo']['tmp_name']) <= $max_size)
+						{
+							if(move_uploaded_file($_FILES['logo']['tmp_name'], $target_file))
+							{
+								$data = $this->request->data;
+								$data->name = htmlspecialchars($data->name);
+								$data->description = htmlspecialchars($data->description);
+								$data->url = htmlspecialchars($data->url);
+								$data->products_type = htmlspecialchars($data->products_type);
+								$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+
+								//Add fields verifying + adding in database and throwing errors
+								if(verifyField($data, 'name', array('empty' => 'no', 'maxLength' => 45))
+								&& verifyField($data, 'description', array('empty' => 'no')))
+								{
+									$data->Logo_id = $this->Brand->saveLogo($src);
+									if($this->Brand->save($data))
+									{
+										$msg = 'Bravo ! Vous avez ajouté une nouvelle marque !';
+										$this->layout->Session->setFlash($msg);
+										$this->redirect('/Azura/safehouse/brand/list');
+									}
+									else
+									{
+										$this->Brand->deleteLogo($data->Logo_id);
+									}
+								}
+							}
+							else
+							{
+								$msg = "Erreur lors du téléchargement de l'image";
+							}
+						}
+						else
+						{
+							$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 10mo.";
+						}
+					}
+				}
+				else
+				{
+					$msg = "Le type de l'image n'est pas correct. Seuls les formats .jpg, .jpeg, .png, .gif et .bmp sont acceptés.";
 				}
 			}
+			else
+			{
+				$msg = "Le fichier existe déjà.";
+			}
 
-			$msg = 'Ouups ! Une erreur est survenu lors de l\'enregistrement de la marque. Veuillez réessayer ou contacter l\'administrateur.';
-			$this->layout->Session->setFlash($msg, 'error');
-
-			$this->redirect('/Azura/safehouse/brand/list');			
+			unlink($target_file);
+			$this->layout->Session->setFlash($msg, 'danger');
+			$this->redirect('/Azura/safehouse/brand/add');			
 		}
 		else
 		{

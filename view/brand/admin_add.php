@@ -9,9 +9,21 @@
 			<h3><p>Dans cet espace vous ajouter une nouvelle marque.</p></h3>
 		</div>
 	</div>
+	<?php 
+    if(isset($_SESSION['flash']))
+    {
+    ?>
+    <div class="row">
+      <div class="col-lg-6">
+      <?php echo($this->Session->flash()); ?>
+        </div>
+    </div>
+    <?php
+    }
+    ?>
 	<div class="row">
 		<div class="col-lg-6">
-			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/achievement/add">
+			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/brand/add" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="name" class="control-label">Nom* :</label>
 					<input id="name" name="name" type="text" class="form-control" maxlength="45" required/>
@@ -30,11 +42,19 @@
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
-					<label for="products_type" class="control-label">Type de produits vendus</label>
+					<label for="products_type" class="control-label">Type de produits vendus :</label>
 					<div class="alert alert-info">
 						<p><i class="fa fa-info-circle"></i> Le type de produits vendus apparaît sur la page d'accueil, sur l'encart de la marque.</p>
 					</div>
 					<input id="products_type" name="products_type" type="text" class="form-control" maxlength="255"/>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="logo" class="control-label">Logo de la marque</label>
+					<div class="alert alert-info">
+						<p><i class="fa fa-info-circle"></i>Poids maximale de l'image : 10mo. Hauteur maximale : 150px - Largeur maximale : 300px</p>
+					</div>
+					<input id="logo" name="logo" type="file" class="form-control" required/>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
@@ -52,6 +72,7 @@
 				      	</label>
 				    </div>
 				</div>
+
 				<p>* Ces champs sont obligatoires</p>
 				<div class="form-group">
 					<div class="col-lg-4 col-lg-offset-9">
