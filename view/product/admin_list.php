@@ -2,8 +2,8 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<h1 class="page-header">
-                Liste des marques
-                <small>Vous pouvez modifier ou supprimer une marque.</small>
+                Liste des produits de la marque <?php echo($brand->name); ?>
+                <small>Vous pouvez modifier ou supprimer un produit.</small>
             </h1>   
         </div>
     </div>
@@ -20,9 +20,6 @@
     }
     ?>
 	<div class="row">
-        <div class="alert alert-info">
-            <p><i class="fa fa-info-circle"></i> Cliquez sur le nom d'une marque pour accéder à ses produits et les gérer (modification et suppression).</p>
-        </div>
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -32,9 +29,8 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nom</th>
+                                    <th>Référence</th>
                                     <th>Description</th>
-                                    <th>Type de produits</th>
-                                    <th>Logo</th>
                                     <th>En ligne</th>
                                     <th>Modifier</th>
                                     <th>Supprimer</th>
@@ -42,21 +38,20 @@
                             </thead>
                             <tbody>
  							<?php 
- 							foreach ($brands as $brand)
+ 							foreach ($products as $product)
  							{
  								echo('<tr>
- 										<td>' . $brand->id . '</td>');
- 								echo('<td><strong><a href="/Azura/safehouse/product/list/' . $brand->id . '">' . $brand->name . '</a></strong></td>');
- 								echo('<td>' . $brand->description . '</td>');
- 								echo('<td>' . $brand->products_type . '</td>');
- 								echo('<td>' . $brand->Logo_id . '</td>');
+ 										<td>' . $product->id . '</td>');
+ 								echo('<td><strong>' . $product->name . '</strong></td>');
+ 								echo('<td>' . $product->reference . '</td>');
+ 								echo('<td>' . $product->description . '</td>');
  								if($brand->online == 1)
  									echo('<td> Oui </td>');
  								else
  									echo('<td> Non </td>');
- 								echo('<td><a href="/Azura/safehouse/brand/edit/' . $brand->id . '"> Modifier </a></td>');
+ 								echo('<td><a href="/Azura/safehouse/product/edit/' . $product->id . '"> Modifier </a></td>');
  								echo('<td><a onclick="return confirm(\'Voulez-vous vraiment supprimer cette marque et tous les produits correspondants ?\')"
-                                href="/Azura/safehouse/brand/delete/' . $brand->id . '"> Supprimer </a></td>');
+                                href="/Azura/safehouse/product/delete/' . $product->id . '"> Supprimer </a></td>');
  								echo('</tr>');
  							}
  							 ?>
