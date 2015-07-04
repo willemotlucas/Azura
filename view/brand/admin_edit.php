@@ -13,9 +13,22 @@
 			<h3><p>Dans cet espace vous modifier une marque. Faites attention avant de sauvegarder !</p></h3>
 		</div>
 	</div>
+	<?php 
+    if(isset($_SESSION['flash']))
+    {
+    ?>
+    <div class="row">
+      <div class="col-lg-6">
+      <?php echo($this->Session->flash()); ?>
+        </div>
+    </div>
+    <?php
+    }
+    ?>
 	<div class="row">
 		<div class="col-lg-6">
-			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/achievement/add">
+			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/brand/edit" enctype="multipart/form-data">
+				<input id="id" name="id" type="hidden" value=<?php echo('"'.$brand->id.'"')?>/>
 				<div class="form-group">
 					<label for="name" class="control-label">Nom* :</label>
 					<input id="name" name="name" type="text" class="form-control" maxlength="45" value=<?php echo('"'.$brand->name.'"')?>required/>
@@ -26,7 +39,7 @@
 					<div class="alert alert-info">
 						<p><i class="fa fa-info-circle"></i> La description apparaît sur la page de la marque.</p>
 					</div>
-					<textarea id="description" name="description" class="form-control" rows="7" required><?php echo('"'.$brand->description.'"')?></textarea>
+					<textarea id="description" name="description" class="form-control" rows="7" required><?php echo($brand->description)?></textarea>
 				</div>
 				<div class="form-group">
 					<label for="url" class="control-label">Lien vers le site de la marque :</label>
@@ -34,11 +47,20 @@
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
-					<label for="products_type" class="control-label">Type de produits vendus</label>
+					<label for="products_type" class="control-label">Type de produits vendus :</label>
 					<div class="alert alert-info">
 						<p><i class="fa fa-info-circle"></i> Le type de produits vendus apparaît sur la page d'accueil, sur l'encart de la marque.</p>
 					</div>
 					<input id="products_type" name="products_type" type="text" class="form-control" maxlength="255" value=<?php echo('"'.$brand->products_type.'"')?>/>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="Logo_id" class="control-label">Logo de la marque :</label>
+					<img src=<?php echo('"' . $logo->src . '"')?> alt=<?php echo('"' . $logo->alt . '"') ?>/>
+					<input type="hidden" name="Logo_id" value=<?php echo('"' . $logo->id . '"');?> />
+					<br>
+					<label for="logo" class="control-label">Modifier l'image du logo :</label>
+					<input id="logo" name="logo" type="file" class="form-control" value="Modifier"/>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">

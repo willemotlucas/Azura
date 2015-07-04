@@ -32,6 +32,23 @@ class Brand extends Model
 		return $id[0]->id;
 	}
 
+	public function updateLogo($id, $src)
+	{
+		$sql = 'UPDATE Brand_Logo SET src="' . $src .'" WHERE id = ' . $id;
+		$prepare = $this->db->prepare($sql);
+		$prepare->execute();
+	}
+
+	public function findLogo($id)
+	{
+		$sql = 'SELECT id, src, alt FROM Brand_logo WHERE id = ' . $id;
+		$prepare = $this->db->prepare($sql);
+		$prepare->execute();
+
+		$logo = $prepare->fetchAll(PDO::FETCH_OBJ);
+		return $logo[0];
+	}
+
 	public function deleteLogo($id)
 	{
 		$sql = 'DELETE FROM Brand_Logo WHERE id = ' . $id;
