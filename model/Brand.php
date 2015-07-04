@@ -39,6 +39,16 @@ class Brand extends Model
 		$prepare->execute();
 	}
 
+	public function findLogoIdWithBrandId($id_brand)
+	{
+		$sql = 'SELECT Logo_id FROM Brands WHERE id = ' . $id_brand;
+		$prepare = $this->db->prepare($sql);
+		$prepare->execute();
+		$res = $prepare->fetchAll(PDO::FETCH_OBJ);
+		$id = $res[0]->Logo_id;
+		return $this->findLogo($id);
+	}
+
 	public function findLogo($id)
 	{
 		$sql = 'SELECT id, src, alt FROM Brand_logo WHERE id = ' . $id;

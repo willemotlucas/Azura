@@ -20,7 +20,7 @@ class BrandController extends Controller
 				'conditions' => 'Brands_id=' . $id,
 				'order' => 'num_order'
 				);*/
-		$products = $this->Product->findProductsWithImages();
+		$products = $this->Product->findProductsWithImage();
 		$nbProducts = $this->Product->findCount();
 		$nbLines = ceil($nbProducts/4);
 		$nbProductsLastLine = $nbProducts%4;
@@ -54,7 +54,11 @@ class BrandController extends Controller
 
 	function admin_delete($id)
 	{
+		$target_dir = ROOT . DS . 'webroot' . DS . 'img' . DS . 'brands'. DS;
 		$this->loadModel('Brand');
+		$logo = $this->Brand->findLogoIdWithBrandId($id);
+		unlink($target_dir . basename($logo->src));
+		$this->Brand->deleteLogo($logo->id);
 		$this->Brand->delete($id);
 		
 		$msg = 'La marque a bien été supprimée.';
