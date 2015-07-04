@@ -67,7 +67,7 @@ if(!empty($products))
 			}
 		?>
 				<div class="thumbnail">
-					<img src=<?php echo('"' . $product->src . '"')?>>
+					<!-- <img src=<?php echo('"' . $product->src . '"')?>> -->
 					<h3>
 						<?php echo($product->name) ?>
 						<small><?php echo($product->reference) ?></small>

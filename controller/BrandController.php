@@ -20,7 +20,7 @@ class BrandController extends Controller
 				'conditions' => 'Brands_id=' . $id,
 				'order' => 'num_order'
 				);*/
-		$products = $this->Product->findProductsWithImage();
+		$products = $this->Product->find();
 		$nbProducts = $this->Product->findCount();
 		$nbLines = ceil($nbProducts/4);
 		$nbProductsLastLine = $nbProducts%4;
