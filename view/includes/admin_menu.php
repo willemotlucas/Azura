@@ -24,7 +24,7 @@
                             <a href="/Azura/safehouse/brand/list">Voir toutes les marques</a>
                         </li>
                         <li>
-                            <a href="#">Ajouter une marque</a>
+                            <a href="/Azura/safehouse/brand/add">Ajouter une marque</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

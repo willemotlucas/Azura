@@ -12,7 +12,7 @@ class Brand extends Model
 
 	public function findBrandWithLogo()
 	{
-		$sql = 'SELECT Brands.id, name, products_type, url, Images.src, Images.alt FROM Brands, Images, Logos WHERE Brands.id = Logos.Brands_id AND Images.id = Logos.Images_id AND Brands.online=1';
+		$sql = 'SELECT Brands.id, name, products_type, description, url, Brand_logo.src, Brand_logo.alt FROM Brands, Brand_logo WHERE Brands.id = Brand_logo.id AND Brands.online=1';
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

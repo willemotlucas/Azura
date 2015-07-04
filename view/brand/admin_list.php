@@ -46,7 +46,7 @@
  								echo('<td><strong>' . $brand->name . '</strong></td>');
  								echo('<td>' . $brand->description . '</td>');
  								echo('<td>' . $brand->products_type . '</td>');
- 								echo('<td>' . $brand->logo_id . '</td>');
+ 								echo('<td>' . $brand->Logo_id . '</td>');
  								if($brand->online == 1)
  									echo('<td> Oui </td>');
  								else

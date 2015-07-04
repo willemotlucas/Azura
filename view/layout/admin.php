@@ -23,6 +23,7 @@
         <!-- Custom CSS -->
         <link href= <?php echo '"' . BASE_URL . '/webroot/css/vendor/metisMenu.min.css"'?> rel="stylesheet">
         <link href= <?php echo '"' . BASE_URL . '/webroot/css/vendor/sb-admin-2.css"'?> rel="stylesheet">
+        <link href= <?php echo '"' . BASE_URL . '/webroot/css/admin/admin.css"'?> rel="stylesheet">
         <link href= <?php echo '"' . BASE_URL . '/webroot/font-awesome/css/font-awesome.min.css"'?> rel="stylesheet">
         <?php  
         if(isset($css))
