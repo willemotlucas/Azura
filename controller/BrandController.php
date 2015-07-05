@@ -81,7 +81,6 @@ class BrandController extends Controller
 			$target_dir = ROOT . DS . 'webroot' . DS . 'img' . DS . 'brands'. DS;
 			$target_file = $target_dir . basename($_FILES['logo']['name']);
 			$src = '/Azura/webroot/img/brands/' . basename($_FILES['logo']['name']);
-			$upload_ok = 1;
 			$img_type = pathinfo($target_file, PATHINFO_EXTENSION);
 			if(!file_exists($target_file))
 			{

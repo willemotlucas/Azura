@@ -77,8 +77,8 @@ class AchievementController extends Controller
 
 	function admin_add()
 	{
-		$this->loadModel('Achievement');
 		$this->layout->setLayout('admin');
+		$this->loadModel('Achievement');
 
 		//We receive the formular to save a new achievement into the database
 		if($this->request->data)

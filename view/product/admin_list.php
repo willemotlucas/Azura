@@ -37,7 +37,7 @@
                                 </tr>
                             </thead>
                             <tbody>
- 							<?php 
+ 							<?php
  							foreach ($products as $product)
  							{
  								echo('<tr>
@@ -50,7 +50,7 @@
  								else
  									echo('<td> Non </td>');
  								echo('<td><a href="/Azura/safehouse/product/edit/' . $product->id . '"> Modifier </a></td>');
- 								echo('<td><a onclick="return confirm(\'Voulez-vous vraiment supprimer cette marque et tous les produits correspondants ?\')"
+ 								echo('<td><a onclick="return confirm(\'Voulez-vous vraiment supprimer ce produit ?\')"
                                 href="/Azura/safehouse/product/delete/' . $product->id . '"> Supprimer </a></td>');
  								echo('</tr>');
  							}
