@@ -67,6 +67,14 @@ class Product extends Model
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 	}
+
+	public function findWithKeyWords($keywords)
+	{
+		$sql = "SELECT * FROM Products WHERE name LIKE '%" . $keywords . "%'";
+		$prepare = $this->db->prepare($sql);
+		$prepare->execute();
+		return $prepare->fetchAll(PDO::FETCH_OBJ);
+	}
 }
 
  ?>

@@ -46,7 +46,7 @@
  							{
  								echo('<tr>
  										<td>' . $brand->id . '</td>');
- 								echo('<td><strong><a href="/Azura/safehouse/product/list/' . $brand->id . '">' . $brand->name . '</a></strong></td>');
+ 								echo('<td><strong><a href="/Azura/safehouse/product/list_brand/' . $brand->id . '">' . $brand->name . '</a></strong></td>');
  								echo('<td>' . $brand->description . '</td>');
  								echo('<td>' . $brand->products_type . '</td>');
  								echo('<td>' . $brand->Logo_id . '</td>');

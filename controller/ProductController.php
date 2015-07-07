@@ -2,7 +2,7 @@
 
 class ProductController extends Controller
 {
-	function admin_list($brand_id, $msg = null)
+	function admin_list_brand($brand_id, $msg = null)
 	{
 		$this->layout->setLayout('admin');
 		$this->loadModel('Product');
@@ -21,7 +21,26 @@ class ProductController extends Controller
 		$this->set('products', $products);
 		$this->set('brand', $brand[0]);
 
-		$this->render('admin_list');
+		$this->render('admin_list_brand');
+	}
+
+	function admin_list()
+	{
+		$this->layout->setLayout('admin');
+		$this->loadModel('Product');
+		if($this->request->data)
+		{
+			$data = $this->request->data;
+			$products = $this->Product->findWithKeyWords($data->keywords);
+			$this->set('products', $products);
+			$this->render('admin_list');
+		}
+		else
+		{
+			$products = $this->Product->find();
+			$this->set('products', $products);
+			$this->render('admin_list');
+		}
 	}
 
 	function admin_add()

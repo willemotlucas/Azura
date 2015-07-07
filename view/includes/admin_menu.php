@@ -45,6 +45,9 @@
                     <a href="#"><i class="fa fa-gavel fa-fw"></i> Produits<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
+                            <a href="/Azura/safehouse/product/list">Voir tous les produits</a>
+                        </li>
+                        <li>
                             <a href="/Azura/safehouse/product/add">Ajouter un produit</a>
                         </li>
                     </ul>
