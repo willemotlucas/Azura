@@ -11,10 +11,14 @@ class Product extends Model
 		parent::__construct();
 	}
 
-	public function findProductsWithImage()
+	public function findProductsWithImage($brand_id = null)
 	{
-		$sql = "SELECT P.id, P.name, P.reference, P.description, P.num_order, P.online, I.src, I.alt FROM Products P, Product_Image PI WHERE P.Product_image_id = PI.id AND";
+		$sql = "SELECT P.id, P.name, P.reference, P.description, P.num_order, P.online, PI.src, PI.alt FROM Products P, Product_Image PI WHERE P.Product_image_id = PI.id";
+		debug(strval($brand_id));
+		if($brand_id != null)
+			$sql .= " AND P.Brand_id=" . $brand_id;
 
+		debug($sql);
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

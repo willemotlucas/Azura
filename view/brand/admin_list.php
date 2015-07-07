@@ -34,7 +34,6 @@
                                     <th>Nom</th>
                                     <th>Description</th>
                                     <th>Type de produits</th>
-                                    <th>Logo</th>
                                     <th>En ligne</th>
                                     <th>Modifier</th>
                                     <th>Supprimer</th>
@@ -49,7 +48,6 @@
  								echo('<td><strong><a href="/Azura/safehouse/product/list_brand/' . $brand->id . '">' . $brand->name . '</a></strong></td>');
  								echo('<td>' . $brand->description . '</td>');
  								echo('<td>' . $brand->products_type . '</td>');
- 								echo('<td>' . $brand->Logo_id . '</td>');
  								if($brand->online == 1)
  									echo('<td> Oui </td>');
  								else
