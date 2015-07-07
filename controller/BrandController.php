@@ -17,7 +17,6 @@ class BrandController extends Controller
 
 		$this->loadModel('Product');
 		$products = $this->Product->findProductsWithImage($id);
-		debug($products);
 		$nbProducts = $this->Product->findCount();
 		$nbLines = ceil($nbProducts/4);
 		$nbProductsLastLine = $nbProducts%4;
