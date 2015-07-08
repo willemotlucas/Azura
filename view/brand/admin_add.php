@@ -52,7 +52,7 @@
 				<div class="form-group">
 					<label for="logo" class="control-label">Logo de la marque</label>
 					<div class="alert alert-info">
-						<p><i class="fa fa-info-circle"></i>Poids maximale de l'image : 10mo. Hauteur maximale : 150px - Largeur maximale : 300px</p>
+						<p><i class="fa fa-info-circle"></i>Poids maximale de l'image : 30ko. Hauteur maximale : 150px - Largeur maximale : 300px</p>
 					</div>
 					<input id="logo" name="logo" type="file" class="form-control" required/>
 					<div class="help-block with-errors"></div>

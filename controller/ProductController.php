@@ -51,7 +51,7 @@ class ProductController extends Controller
 		{
 			//Authorized extension, size max
 			$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
-			$max_size = 20000;
+			$max_size = 30000;
 			$width_max = 300;
 			$height_max = 300;
 			$msg = "";
@@ -92,7 +92,7 @@ class ProductController extends Controller
 									{
 										$msg = 'Bravo ! Vous avez ajouté un nouveau produit !';
 										$this->layout->Session->setFlash($msg);
-										$this->redirect('/Azura/safehouse/product/list/' . $brand[0]);
+										$this->redirect('/Azura/safehouse/product/list/');
 									}
 									else
 									{
@@ -107,7 +107,7 @@ class ProductController extends Controller
 						}
 						else
 						{
-							$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 10mo.";
+							$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 30ko.";
 						}
 					}
 				}
@@ -138,7 +138,127 @@ class ProductController extends Controller
 
 	function admin_edit($id = null)
 	{
+		$this->loadModel('Product');
+		$this->layout->setLayout('admin');
+		if($this->request->data)
+		{
+			//The user has changed the product's image, we have to reload it into the server
+			if(!empty($_FILES['product_image']['name']))
+			{
+				//Authorized extension, size max
+				$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
+				$max_size = 30000;
+				$width_max = 300;
+				$height_max = 300;
+				$msg = "";
 
+				//Save the logo into the server and add logo's url into database
+				$target_dir = ROOT . DS . 'webroot' . DS . 'img' . DS . 'products'. DS;
+				$target_file = $target_dir . basename($_FILES['product_image']['name']);
+				$src = '/Azura/webroot/img/products/' . basename($_FILES['product_image']['name']);
+				$img_type = pathinfo($target_file, PATHINFO_EXTENSION);
+
+				if(!file_exists($target_file))
+				{
+					if(in_array(strtolower($img_type), $ext))
+					{
+						$check = getimagesize($_FILES['product_image']['tmp_name']);
+						if($check[2] >= 1 && $check[2] <= 14)
+						{
+							if($check[0] <= $width_max && $check[1] <= $height_max && filesize($_FILES['product_image']['tmp_name']) <= $max_size)
+							{
+								if(move_uploaded_file($_FILES['product_image']['tmp_name'], $target_file))
+								{
+									
+									$data = $this->request->data;
+									$data->name = htmlspecialchars($data->name);
+									$data->reference = htmlspecialchars($data->reference);
+									$data->description = htmlspecialchars($data->description);
+									$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+									$brand = explode(' ', $data->brand);
+									$data->Brand_id = $brand[0];
+									unset($data->brand);
+
+									if(verifyField($data, 'name', array('emtpy' => 'no', 'maxLength' => 45))
+									&& verifyField($data, 'reference', array('maxLength' => 45)))
+									{
+										$this->loadModel('Product');
+										$data->Product_image_id = $this->Product->saveImage($src);
+										if($this->Product->save($data))
+										{
+											$msg = 'Bravo ! Vous avez ajouté un nouveau produit !';
+											$this->layout->Session->setFlash($msg);
+											$this->redirect('/Azura/safehouse/product/list/');
+										}
+										else
+										{
+											$this->Product->deleteImage($data->Product_image_id);
+										}
+									}
+								}
+								else
+								{
+									$msg = "Erreur lors du téléchargement de l'image";
+								}
+							}
+							else
+							{
+								$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 30ko.";
+							}
+						}
+					}
+					else
+					{
+						$msg = "Le type de l'image n'est pas correct. Seuls les formats .jpg, .jpeg, .png, .gif et .bmp sont acceptés.";
+					}
+				}
+				else
+				{
+					$msg = "Le fichier existe déjà.";
+				}
+
+				unlink($target_file);
+				$this->layout->Session->setFlash($msg, 'danger');
+				$this->redirect('/Azura/safehouse/product/edit' . $this->request->data->id);
+			}
+			//The user hasn't changed the product's image, we juste have to update the product's info
+			else
+			{
+				$data = $this->request->data;
+				$data->name = htmlspecialchars($data->name);
+				$data->reference = htmlspecialchars($data->reference);
+				$data->description = htmlspecialchars($data->description);
+				$data->online == 'yes' ? $this->request->data->online = 1 : $this->request->data->online = 0;
+				$brand = explode(' ', $data->brand);
+				$data->Brand_id = $brand[0];
+				unset($data->brand);
+
+				if(verifyField($data, 'name', array('emtpy' => 'no', 'maxLength' => 45))
+				&& verifyField($data, 'reference', array('maxLength' => 45)))
+				{
+					$this->loadModel('Product');
+					$data->Product_image_id = $this->Product->saveImage($src);
+					if($this->Product->save($data))
+					{
+						$msg = 'Bravo ! Vous avez ajouté mis à jour le produit !' . $data->name;
+						$this->layout->Session->setFlash($msg);
+						$this->redirect('/Azura/safehouse/product/list/');
+					}
+				}
+			}
+		}
+		else
+		{
+			$this->loadModel('Brand');
+			$brands = $this->Brand->find();
+			$product = $this->Product->find(array('conditions' => 'id=' . $id));
+			$product_image = $this->Product->findImage($product[0]->Product_image_id);
+			$this->set('brands', $brands);
+			$this->set('product', $product[0]);
+			$this->set('product_image', $product_image);
+
+			$this->render('admin_edit');
+		}
 	}
 
 	function admin_delete($id)

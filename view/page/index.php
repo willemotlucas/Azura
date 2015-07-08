@@ -71,7 +71,7 @@
     ?>
 
                         <div class="thumbnail">
-                            <img class="img-responsive" src=<?php echo('"' . $brand->src . '"'); ?> alt=<?php echo('"' . $brand->alt . '"'); ?>>
+                            <a href=<?php echo('"' . $brand->url . '"');?>><img class="img-responsive" src=<?php echo('"' . $brand->src . '"'); ?> alt=<?php echo('"' . $brand->alt . '"'); ?>></a>
                             <div class="caption">
                                 <h3><?php echo($brand->name); ?><br>
                                     <small class="text-black"><?php echo($brand->products_type); ?></small> <br><br>

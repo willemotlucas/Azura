@@ -72,9 +72,9 @@ class BrandController extends Controller
 		{
 			//Authorized extension, size max
 			$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
-			$max_size = 20000;
-			$width_max = 300;
-			$height_max = 150;
+			$max_size = 30000;
+			$width_max = 301;
+			$height_max = 151;
 			$msg = "";
 
 			//Save the logo into the server and add logo's url into database
@@ -124,7 +124,7 @@ class BrandController extends Controller
 						}
 						else
 						{
-							$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 10mo.";
+							$msg = "La taille de l'image est trop grande, veuillez la redimensionner. Les dimensions maximales sont 300x150, le poids maximum est de 30ko.";
 						}
 					}
 				}
@@ -158,11 +158,12 @@ class BrandController extends Controller
 		$this->layout->setLayout('admin');
 		if($this->request->data)
 		{
+			//If the user changes the brand's logo, we have to reload it into server
 			if(!empty($_FILES['logo']['name']))
 			{
 				//Authorized extension, size max
 				$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
-				$max_size = 20000;
+				$max_size = 30000;
 				$width_max = 300;
 				$height_max = 150;
 				$msg = "";
@@ -200,7 +201,7 @@ class BrandController extends Controller
 										$this->Brand->updateLogo($data->Logo_id,$src);
 										if($this->Brand->save($data))
 										{
-											$msg = 'Bravo ! Vous avez mis à jour la marque ' . $data->name . ' !';
+											$msg = 'Bravo ! Vous avez mis à jour la marque  ' . $data->name . ' !';
 											$this->layout->Session->setFlash($msg);
 											$this->redirect('/Azura/safehouse/brand/list');
 										}
@@ -235,7 +236,7 @@ class BrandController extends Controller
 				$this->layout->Session->setFlash($msg, 'danger');
 				$this->redirect('/Azura/safehouse/brand/edit/' . $this->request->data->id);
 			}
-			else
+			else //The user doesn't change the brand's logo, we just have to update the brand's info
 			{
 				$data = $this->request->data;
 				$data->name = htmlspecialchars($data->name);
@@ -261,10 +262,11 @@ class BrandController extends Controller
 			$brand = $this->Brand->findFirst(array(
 				'conditions' => 'id=' . $id)
 			);
-			$logo = $this->Brand->findLogo($brand->Logo_id);
-
+			
 			if(empty($brand))
 				$this->admin_e404();
+			
+			$logo = $this->Brand->findLogo($brand->Logo_id);
 
 			$this->set('brand', $brand);
 			$this->set('logo', $logo);
