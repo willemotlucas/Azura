@@ -145,7 +145,7 @@ class Model
 		{
 			$sql .= ' LIMIT ' . $req['limit'];			
 		}
-
+ 		
 		$prepare = $this->db->prepare($sql);
 		$prepare->execute();
 

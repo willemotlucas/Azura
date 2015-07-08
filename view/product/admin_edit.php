@@ -23,14 +23,17 @@
     ?>
 	<div class="row">
 		<div class="col-lg-6">
-			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/product/add" enctype="multipart/form-data">
+			<form data-toggle="validator" role="form" method="POST" action="/Azura/safehouse/product/edit" enctype="multipart/form-data">
 				<input id="id" name="id" type="hidden" value=<?php echo('"'.$product->id.'"')?>/>
 				<div class="form-group">
 					<label for="brand" class="control-label">Marque du produit* :</label>					<div class="help-block with-errors"></div>
 					<select id="brand" name="brand" required>
 						<?php
 							foreach ($brands as $brand) {
-								echo('<option>' . $brand->id . ' ' . $brand->name . '</option>');
+								if($brand->id == $product->Brand_id)
+									echo('<option selected>' . $brand->id . ' ' . $brand->name . '</option>');
+								else
+									echo('<option>' . $brand->id . ' ' . $brand->name . '</option>');
 							}
 						?>
 					</select>
@@ -53,12 +56,12 @@
 					<textarea id="description" name="description" class="form-control" rows="7" required><?php echo($product->description);?></textarea>
 				</div>
 				<div class="form-group">
-					<label for="product_image" class="control-label">Image du produit : </label>
+					<label for="Product_image_id" class="control-label">Image du produit : </label>
 					<img src=<?php echo('"' . $product_image->src . '"')?> alt=<?php echo('"' . $product_image->alt . '"') ?>/>
 					<input type="hidden" name="Product_image_id" value=<?php echo('"' . $product_image->id . '"');?> />
 					<br>
 					<label for="product_image" class="control-label">Modifier l'image du logo :</label>
-					<input id="product_image" name="product_image" type="file" class="form-control" required/>
+					<input id="product_image" name="product_image" type="file" class="form-control"/>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">

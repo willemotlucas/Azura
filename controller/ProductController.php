@@ -148,8 +148,8 @@ class ProductController extends Controller
 				//Authorized extension, size max
 				$ext = array('jpg', 'png', 'jpeg', 'gif', 'bmp');
 				$max_size = 30000;
-				$width_max = 300;
-				$height_max = 300;
+				$width_max = 301;
+				$height_max = 301;
 				$msg = "";
 
 				//Save the logo into the server and add logo's url into database
@@ -186,7 +186,7 @@ class ProductController extends Controller
 										$data->Product_image_id = $this->Product->saveImage($src);
 										if($this->Product->save($data))
 										{
-											$msg = 'Bravo ! Vous avez ajouté un nouveau produit !';
+											$msg = 'Bravo ! Vous avez modifié le produit ' . $data->name . ' !';
 											$this->layout->Session->setFlash($msg);
 											$this->redirect('/Azura/safehouse/product/list/');
 										}
@@ -219,7 +219,7 @@ class ProductController extends Controller
 
 				unlink($target_file);
 				$this->layout->Session->setFlash($msg, 'danger');
-				$this->redirect('/Azura/safehouse/product/edit' . $this->request->data->id);
+				$this->redirect('/Azura/safehouse/product/edit/' . $this->request->data->id);
 			}
 			//The user hasn't changed the product's image, we juste have to update the product's info
 			else
@@ -237,10 +237,9 @@ class ProductController extends Controller
 				&& verifyField($data, 'reference', array('maxLength' => 45)))
 				{
 					$this->loadModel('Product');
-					$data->Product_image_id = $this->Product->saveImage($src);
 					if($this->Product->save($data))
 					{
-						$msg = 'Bravo ! Vous avez ajouté mis à jour le produit !' . $data->name;
+						$msg = 'Bravo ! Vous avez ajouté mis à jour le produit ' . $data->name . ' !';
 						$this->layout->Session->setFlash($msg);
 						$this->redirect('/Azura/safehouse/product/list/');
 					}
@@ -251,11 +250,13 @@ class ProductController extends Controller
 		{
 			$this->loadModel('Brand');
 			$brands = $this->Brand->find();
+			$this->set('brands', $brands);
+
 			$product = $this->Product->find(array('conditions' => 'id=' . $id));
 			$product_image = $this->Product->findImage($product[0]->Product_image_id);
-			$this->set('brands', $brands);
-			$this->set('product', $product[0]);
 			$this->set('product_image', $product_image);
+
+			$this->set('product', $product[0]);
 
 			$this->render('admin_edit');
 		}
